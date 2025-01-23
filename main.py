@@ -21,6 +21,9 @@ class My_UI(QMainWindow):
         self.pushButtonUSA = self.findChild(QPushButton, "pushButtonUSA")
         self.pushButtonUSA.clicked.connect(self.pushButtonUSAclicked)
 
+        self.pushButtonUK = self.findChild(QPushButton, "pushButtonUK")
+        self.pushButtonUK.clicked.connect(self.pushButtonUKclicked)
+
         '''
         self.heading = self.findChild(QLabel,"lbl_heading")
         self.buttonAdd = self.findChild(QPushButton,"add_btn")
@@ -52,9 +55,14 @@ class My_UI(QMainWindow):
 
     def pushButtonAUSclicked(self):
         uic.loadUi("australia_nodeclick.ui",self)
-
     def pushButtonUSAclicked(self):
         uic.loadUi("america_nodeclick.ui",self)
+    def pushButtonUKclicked(self):
+        uic.loadUi("UKpopout.ui",self)
+        self.pushButtonENG = self.findChild(QPushButton, "pushButtonENG") 
+        self.pushButtonENG.clicked.connect(self.pushButtonENGclicked)
+        def pushButtonclickedENG(self):
+            uic.loadUi("england_nodeclick.ui",self)
     
     def listwidget_clicked(self):
     
