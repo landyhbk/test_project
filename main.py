@@ -14,8 +14,12 @@ class My_UI(QMainWindow):
         super(My_UI,self).__init__() # call constrcutor of parent class
         
         uic.loadUi("firstGUIdraft.ui",self)
+        
         self.pushButtonAUS = self.findChild(QPushButton, "pushButtonAUS")
         self.pushButtonAUS.clicked.connect(self.pushButtonAUSclicked)
+
+        self.pushButtonUSA = self.findChild(QPushButton, "pushButtonUSA")
+        self.pushButtonUSA.clicked.connect(self.pushButtonUSAclicked)
 
         '''
         self.heading = self.findChild(QLabel,"lbl_heading")
@@ -49,7 +53,8 @@ class My_UI(QMainWindow):
     def pushButtonAUSclicked(self):
         uic.loadUi("australia_nodeclick.ui",self)
 
-
+    def pushButtonUSAclicked(self):
+        uic.loadUi("america_nodeclick.ui",self)
     
     def listwidget_clicked(self):
     
