@@ -27,7 +27,7 @@
      <string>Choose from the countries in the UK:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButtonENG">
     <property name="geometry">
      <rect>
       <x>0</x>

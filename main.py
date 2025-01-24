@@ -5,8 +5,40 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, \
 from PyQt5 import uic
 from datetime import datetime
 
+
 TIME_LIMIT = 100
 
+
+class My_UI(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("firstGUIdraft.ui",self)
+
+class AustraliaWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("australia_nodeclick.ui",self)
+
+class USAWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("america_nodeclick.ui",self)
+
+class UKWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("UKpopout_nodeclick.ui",self)
+        self.pushButtonENG = self.findChild(QtWidgets.QPushButton, "pushButtonENG")
+        self.pushButtonENG.clicked.connect(self.pushButtonUKclicked)
+    
+    def open_england_window():
+        def pushButtonENGclicked(self):
+            uic.loadUi("england_nodeclick.ui")
+        
+
+
+
+'''
 class My_UI(QMainWindow):
 
     def __init__(self):
@@ -24,7 +56,12 @@ class My_UI(QMainWindow):
         self.pushButtonUK = self.findChild(QPushButton, "pushButtonUK")
         self.pushButtonUK.clicked.connect(self.pushButtonUKclicked)
 
+       
+
+
+
         '''
+'''
         self.heading = self.findChild(QLabel,"lbl_heading")
         self.buttonAdd = self.findChild(QPushButton,"add_btn")
         self.buttonDelete = self.findChild(QPushButton,"del_btn")
@@ -48,7 +85,7 @@ class My_UI(QMainWindow):
         self.lwModel = self.listWidget.model()                             # need to pick up events on the list
         self.lwModel.rowsInserted.connect(self.checkListLength)            # Any time an element is added run function
         self.lwModel.rowsRemoved.connect(self.checkListLength)             # Any time an element is removed run function
-'''
+
         self.show()
     
     #end def
@@ -58,12 +95,16 @@ class My_UI(QMainWindow):
     def pushButtonUSAclicked(self):
         uic.loadUi("america_nodeclick.ui",self)
     def pushButtonUKclicked(self):
-        uic.loadUi("UKpopout.ui",self)
-        self.pushButtonENG = self.findChild(QPushButton, "pushButtonENG") 
+        uic.loadUi("Ukpopout.ui",self)
+        self.pushButtonENG = self.findChild(QPushButton, "pushButtonENG")
         self.pushButtonENG.clicked.connect(self.pushButtonENGclicked)
-        def pushButtonclickedENG(self):
-            uic.loadUi("england_nodeclick.ui",self)
+    def pushButtonENGclicked(self):
+        uic.loadUi("england_nodeclick.ui")
+
+
     
+    '''
+'''
     def listwidget_clicked(self):
     
         print(self.listWidget.currentRow())
@@ -143,7 +184,7 @@ class My_UI(QMainWindow):
     #enddef
 
 #endclass
-
+'''
 # main starts here - init App
 app = QApplication(sys.argv)
 window = My_UI()
