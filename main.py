@@ -12,30 +12,123 @@ TIME_LIMIT = 100
 class My_UI(QMainWindow):
     def __init__(self):
         super().__init__()
+        uic.loadUi("firstGUIdraft.ui", self)
+        self.show()
+
+        #
+        self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
+        self.pushButtonUSA = self.findChild(QtWidgets.QPushButton, "pushButtonUSA")
+        self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
+
+        self.pushButtonAUS.clicked.connect(self.open_australia_window)
+        self.pushButtonUSA.clicked.connect(self.open_usa_window)
+        self.pushButtonUK.clicked.connect(self.open_uk_window)
+
+    def open_australia_window(self):
+        self.australia_window = AustraliaWindow()
+        self.australia_window.show()
+
+    def open_usa_window(self):
+        self.usa_window = USAWindow()
+        self.usa_window.show()
+
+    def open_uk_window(self):
+        self.uk_window = UKWindow()
+        self.uk_window.show()
+
+
+
+class AustraliaWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("australia_nodeclick.ui", self)
+        self.show()
+
+
+
+class USAWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("america_nodeclick.ui", self)
+        self.show()
+
+
+
+class UKWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("UKpopout.ui", self)
+        self.show()
+
+        
+        self.pushButtonENG = self.findChild(QtWidgets.QPushButton, "pushButtonENG")
+        self.pushButtonENG.clicked.connect(self.open_england_window)
+        self.pushButtonSCO = self.findChild(QtWidgets.QPushButton, "pushButtonSCO")
+        self.pushButtonSCO.clicked.connect(self.open_scotland_window)
+
+    def open_england_window(self):
+        self.england_window = EnglandWindow()
+        self.england_window.show()
+
+    def open_scotland_window(self):
+        self.scotland_window = ScotlandWindow()
+        self.scotland_window.show()
+
+
+
+class EnglandWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("england_nodeclick.ui", self)
+        self.show()
+
+class ScotlandWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("scotland_nodeclick.ui",self)
+        self.show()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = My_UI()
+    sys.exit(app.exec_())
+
+
+'''
+class My_UI(QMainWindow):
+    def __init__(self):
+        super().__init__()
         uic.loadUi("firstGUIdraft.ui",self)
+        self.show()
 
 class AustraliaWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("australia_nodeclick.ui",self)
+        self.show()
 
 class USAWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("america_nodeclick.ui",self)
+        self.show()
 
 class UKWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("UKpopout_nodeclick.ui",self)
+        self.show()
         self.pushButtonENG = self.findChild(QtWidgets.QPushButton, "pushButtonENG")
         self.pushButtonENG.clicked.connect(self.pushButtonUKclicked)
+
     
     def open_england_window():
         def pushButtonENGclicked(self):
             uic.loadUi("england_nodeclick.ui")
+            self.show()
         
-
+'''
 
 
 '''
@@ -185,12 +278,13 @@ class My_UI(QMainWindow):
 
 #endclass
 '''
+'''
 # main starts here - init App
 app = QApplication(sys.argv)
 window = My_UI()
 app.exec_()
 sys.exit(app.exec_())
-
+'''
 
 '''
 jhvkjvjhgf
