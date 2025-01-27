@@ -4,10 +4,21 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, \
     QLabel, QTextBrowser, QComboBox, QListWidget, QProgressBar, QMessageBox, QDialogButtonBox
 from PyQt5 import uic
 from datetime import datetime
+import json 
 
 
 TIME_LIMIT = 100
 
+def load_json(file_path="testjson.json"):
+    try:
+        with open(file_path, "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print("Error: JSON file not found.")
+        return {}
+    except json.JSONDecodeError:
+        print("Error: JSON file is invalid.")
+        return {}
 
 class My_UI(QMainWindow):
     def __init__(self):
@@ -44,6 +55,70 @@ class AustraliaWindow(QMainWindow):
         uic.loadUi("australia_nodeclick.ui", self)
         self.show()
 
+       
+        self.data = load_json()
+
+        
+        self.pushButtonAUSTEAMS.clicked.connect(self.show_teams)
+        self.pushButtonAUSSTADIUMS.clicked.connect(self.show_stadiums)
+        self.pushButtonAUSFIX.clicked.connect(self.show_fixtures)
+        self.pushButtonAUSTROPHIES.clicked.connect(self.show_trophies)
+
+    
+
+    def show_teams(self):
+        teams = self.data["Australia"]["Teams"]
+        team_info = "\n\n".join(teams)
+
+        # Create a custom QMessageBox
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Teams")  # Set the heading
+        msg.setText(team_info)       # Set the main content
+        msg.setIcon(QMessageBox.NoIcon)  # Remove the default icon
+        msg.setStandardButtons(QMessageBox.Close)  # Add OK button
+        msg.exec_()
+
+    def show_stadiums(self):
+        stadiums = self.data["Australia"]["Stadiums"]
+        stadium_info = "\n\n".join(
+            [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
+        )
+
+        # Create a custom QMessageBox
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Stadiums")
+        msg.setText(stadium_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+        
+       
+    def show_fixtures(self):
+        fixtures = self.data["Australia"]["Fixtures"]
+        fixture_info = "\n\n".join(
+            [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
+        )
+        
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Fixtures")
+        msg.setText(fixture_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+    def show_trophies(self):
+        trophies = self.data["Australia"]["Trophies"]
+        trophy_info = "\n\n".join(
+            [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Fixtures")
+        msg.setText(trophy_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
 
 
 class USAWindow(QMainWindow):
@@ -81,6 +156,39 @@ class EnglandWindow(QMainWindow):
         super().__init__()
         uic.loadUi("england_nodeclick.ui", self)
         self.show()
+
+        self.data = load_json()
+
+        
+        self.pushButtonENGTEAMS.clicked.connect(self.show_teams)
+        self.pushButtonENGSTADIUMS.clicked.connect(self.show_stadiums)
+        self.pushButtonENGFIX.clicked.connect(self.show_fixtures)
+        self.pushButtonENGTROPHIES.clicked.connect(self.show_trophies)
+
+    def show_teams(self):
+        teams = self.data["England"]["Teams"]
+        QMessageBox.information(self, "Teams", "\n\n".join(teams))
+
+    def show_stadiums(self):
+        stadiums = self.data["England"]["Stadiums"]
+        stadium_info = "\n\n".join(
+            [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
+        )
+        QMessageBox.information(self, "Stadiums", stadium_info)
+
+    def show_fixtures(self):
+        fixtures = self.data["England"]["Fixtures"]
+        fixture_info = "\n\n".join(
+            [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
+        )
+        QMessageBox.information(self, "Fixtures", fixture_info)
+
+    def show_trophies(self):
+        trophies = self.data["England"]["Trophies"]
+        trophy_info = "\n\n".join(
+            [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
+        )
+        QMessageBox.information(self, "Trophies", trophy_info)
 
 class ScotlandWindow(QMainWindow):
     def __init__(self):

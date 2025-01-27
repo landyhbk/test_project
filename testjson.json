@@ -1,0 +1,81 @@
+{
+    "Australia": {
+        "Teams": [
+            "Brumbies",
+            "Waratahs",
+            "Reds",
+            "Rebels",
+            "Force"
+        ],
+        "Stadiums": [
+            {
+                "name": "ANZ Stadium",
+                "capacity": 83500,
+                "city": "Sydney"
+            },
+            {
+                "name": "Suncorp Stadium",
+                "capacity": 52500,
+                "city": "Brisbane"
+            }
+        ],
+        "Fixtures": [
+            {
+                "date": "2024-01-15",
+                "opponent": "New Zealand",
+                "venue": "ANZ Stadium",
+                "result": "Win"
+            },
+            {
+                "date": "2024-02-05",
+                "opponent": "England",
+                "venue": "Twickenham",
+                "result": "Loss"
+            }
+        ],
+        "Trophies": [
+            {
+                "name": "Bledisloe Cup",
+                "year_won": [1998, 2000, 2001]
+            },
+            {
+                "name": "Tri Nations Championship",
+                "year_won": [2001, 2011]
+            }
+        ],
+        "Graph": {
+            "place_holder": "Graph data for performance trends"
+        }
+    },
+    "England": {
+        "Teams": [
+            "Harlequins",
+            "Saracens",
+            "Leicester Tigers"
+        ],
+        "Stadiums": [
+            {
+                "name": "Twickenham Stadium",
+                "capacity": 82000,
+                "city": "London"
+            }
+        ],
+        "Fixtures": [
+            {
+                "date": "2024-03-10",
+                "opponent": "Australia",
+                "venue": "Twickenham",
+                "result": "Win"
+            }
+        ],
+        "Trophies": [
+            {
+                "name": "Six Nations Championship",
+                "year_won": [2003, 2016, 2017]
+            }
+        ],
+        "Graph": {
+            "place_holder": "Graph data for England performance trends"
+        }
+    }
+}

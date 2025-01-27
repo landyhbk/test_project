@@ -52,7 +52,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButtonAUSTEAMS">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -65,7 +65,7 @@
      <string>Teams</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButtonAUSSTADIUMS">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -78,7 +78,7 @@
      <string>Stadiums</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButtonAUSFIX">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -104,7 +104,7 @@
      <string>...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="pushButtonAUSTROPHIES">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -117,7 +117,7 @@
      <string>Trophies</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="pushButtonAUSGRAPH">
     <property name="geometry">
      <rect>
       <x>20</x>
