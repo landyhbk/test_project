@@ -51,12 +51,44 @@
         "Teams": [
             "Harlequins",
             "Saracens",
-            "Leicester Tigers"
+            "Leicester Tigers",
+            "Northhampton Saints",
+            "Bath",
+            "Sale",
+            "Newcastle Falcons",
+            "Exeter Cheifs",
+            "Gloucester",
+            "Bristol Bears", 
+            "Harlequins",
+            "Saracens",
+            "Leicester Tigers",
+            "Northhampton Saints",
+            "Bath",
+            "Sale",
+            "Newcastle Falcons",
+            "Exeter Cheifs",
+            "Gloucester",
+            "Bristol Bears",
+            "Harlequins",
+            "Saracens",
+            "Leicester Tigers",
+            "Northhampton Saints",
+            "Bath",
+            "Sale",
+            "Newcastle Falcons",
+            "Exeter Cheifs",
+            "Gloucester",
+            "Bristol Bears"
         ],
         "Stadiums": [
             {
                 "name": "Twickenham Stadium",
                 "capacity": 82000,
+                "city": "London"
+            },
+            {
+                "name": "Twickenham Stoop",
+                "capacity": 14000,
                 "city": "London"
             }
         ],

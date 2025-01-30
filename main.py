@@ -26,7 +26,7 @@ class My_UI(QMainWindow):
         uic.loadUi("firstGUIdraft.ui", self)
         self.show()
 
-        #
+        
         self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
         self.pushButtonUSA = self.findChild(QtWidgets.QPushButton, "pushButtonUSA")
         self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
@@ -72,10 +72,10 @@ class AustraliaWindow(QMainWindow):
 
         # Create a custom QMessageBox
         msg = QMessageBox(self)
-        msg.setWindowTitle("Teams")  # Set the heading
+        msg.setWindowTitle("Teams")  # Set the heading - this is not working try to ammend later
         msg.setText(team_info)       # Set the main content
         msg.setIcon(QMessageBox.NoIcon)  # Remove the default icon
-        msg.setStandardButtons(QMessageBox.Close)  # Add OK button
+        msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
     def show_stadiums(self):
