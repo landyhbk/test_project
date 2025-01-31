@@ -67,7 +67,62 @@
     </property>
     <item>
      <property name="text">
-      <string>Example team</string>
+      <string>Top 10 teams</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- South Africa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Ireland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- New Zealand</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- France</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Argentina</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Scotland</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- England</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Australia</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Fiji</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>- Italy</string>
      </property>
     </item>
    </widget>
