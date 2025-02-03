@@ -32,12 +32,18 @@ class My_UI(QMainWindow):
         self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
         self.pushButtonSA = self.findChild(QtWidgets.QPushButton, "pushButtonSA")
         self.pushButtonNZL = self.findChild(QtWidgets.QPushButton, "pushButtonNZL")
+        self.pushButtonFRA = self.findChild(QtWidgets.QPushButton, "pushButtonFRA")
+        self.pushButtonARG = self.findChild(QtWidgets.QPushButton, "pushButtonARG")
+        self.pushButtonITA = self.findChild(QtWidgets.QPushButton, "pushButtonITA")
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
         self.pushButtonUK.clicked.connect(self.open_uk_window)
         self.pushButtonSA.clicked.connect(self.open_southafrica_window)
         self.pushButtonNZL.clicked.connect(self.open_newzealand_window)
+        self.pushButtonFRA.clicked.connect(self.open_france_window)
+        self.pushButtonARG.clicked.connect(self.open_argentina_window)
+        self.pushButtonITA.clicked.connect(self.open_italy_window)
 
     def open_australia_window(self):
         self.australia_window = AustraliaWindow()
@@ -59,6 +65,17 @@ class My_UI(QMainWindow):
         self.nzl_window = NZLWindow()
         self.nzl_window.show()
 
+    def open_france_window(self):
+        self.fra_window = FRAWindow()
+        self.fra_window.show()
+
+    def open_argentina_window(self):
+        self.arg_window = ARGWindow()
+        self.arg_window.show()
+
+    def open_italy_window(self):
+        self.ita_window = ITAWindow()
+        self.ita_window.show()
 
 
 class AustraliaWindow(QMainWindow):
@@ -243,6 +260,26 @@ class NZLWindow(QMainWindow):
         super().__init__()
         uic.loadUi("newzealand_nodeclick.ui", self)
         self.show()
+
+class FRAWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("france_nodeclick.ui", self)
+
+class ARGWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("argentina_nodeclick.ui")
+
+class ITAWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("italy_nodeclick.ui")
+
+
+
+
+
 
 
 if __name__ == "__main__":
