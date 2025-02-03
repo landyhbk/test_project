@@ -30,10 +30,14 @@ class My_UI(QMainWindow):
         self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
         self.pushButtonUSA = self.findChild(QtWidgets.QPushButton, "pushButtonUSA")
         self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
+        self.pushButtonSA = self.findChild(QtWidgets.QPushButton, "pushButtonSA")
+        self.pushButtonNZL = self.findChild(QtWidgets.QPushButton, "pushButtonNZL")
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
         self.pushButtonUK.clicked.connect(self.open_uk_window)
+        self.pushButtonSA.clicked.connect(self.open_southafrica_window)
+        self.pushButtonNZL.clicked.connect(self.open_newzealand_window)
 
     def open_australia_window(self):
         self.australia_window = AustraliaWindow()
@@ -46,6 +50,14 @@ class My_UI(QMainWindow):
     def open_uk_window(self):
         self.uk_window = UKWindow()
         self.uk_window.show()
+
+    def open_southafrica_window(self):
+        self.sa_window = SAWindow()
+        self.sa_window.show()
+
+    def open_newzealand_window(self):
+        self.nzl_window = NZLWindow()
+        self.nzl_window.show()
 
 
 
@@ -140,6 +152,11 @@ class UKWindow(QMainWindow):
         self.pushButtonENG.clicked.connect(self.open_england_window)
         self.pushButtonSCO = self.findChild(QtWidgets.QPushButton, "pushButtonSCO")
         self.pushButtonSCO.clicked.connect(self.open_scotland_window)
+        self.pushButtonWAL = self.findChild(QtWidgets.QPushButton, "pushButtonWAL")
+        self.pushButtonWAL.clicked.connect(self.open_wales_window)
+        self.pushButtonIRE = self.findChild(QtWidgets.QPushButton, "pushButtonIRE")
+        self.pushButtonIRE.clicked.connect(self.open_ireland_window)
+
 
     def open_england_window(self):
         self.england_window = EnglandWindow()
@@ -149,6 +166,13 @@ class UKWindow(QMainWindow):
         self.scotland_window = ScotlandWindow()
         self.scotland_window.show()
 
+    def open_wales_window(self):
+        self.wales_window = WalesWindow()
+        self.wales_window.show()
+
+    def open_ireland_window(self):
+        self.wales_window = IrelandWindow()
+        self.wales_window.show()
 
 
 class EnglandWindow(QMainWindow):
@@ -196,6 +220,30 @@ class ScotlandWindow(QMainWindow):
         uic.loadUi("scotland_nodeclick.ui",self)
         self.show()
 
+class WalesWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("wales_nodeclick.ui",self)
+        self.show()
+
+class IrelandWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("ireland_nodeclick.ui",self)
+        self.show()
+
+class SAWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("southafrica_nodeclick.ui", self)
+        self.show()
+
+class NZLWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("newzealand_nodeclick.ui", self)
+        self.show()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -203,197 +251,3 @@ if __name__ == "__main__":
     sys.exit(app.exec_())
 
 
-'''
-class My_UI(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("firstGUIdraft.ui",self)
-        self.show()
-
-class AustraliaWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("australia_nodeclick.ui",self)
-        self.show()
-
-class USAWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("america_nodeclick.ui",self)
-        self.show()
-
-class UKWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi("UKpopout_nodeclick.ui",self)
-        self.show()
-        self.pushButtonENG = self.findChild(QtWidgets.QPushButton, "pushButtonENG")
-        self.pushButtonENG.clicked.connect(self.pushButtonUKclicked)
-
-    
-    def open_england_window():
-        def pushButtonENGclicked(self):
-            uic.loadUi("england_nodeclick.ui")
-            self.show()
-        
-'''
-
-
-'''
-class My_UI(QMainWindow):
-
-    def __init__(self):
-
-        super(My_UI,self).__init__() # call constrcutor of parent class
-        
-        uic.loadUi("firstGUIdraft.ui",self)
-        
-        self.pushButtonAUS = self.findChild(QPushButton, "pushButtonAUS")
-        self.pushButtonAUS.clicked.connect(self.pushButtonAUSclicked)
-
-        self.pushButtonUSA = self.findChild(QPushButton, "pushButtonUSA")
-        self.pushButtonUSA.clicked.connect(self.pushButtonUSAclicked)
-
-        self.pushButtonUK = self.findChild(QPushButton, "pushButtonUK")
-        self.pushButtonUK.clicked.connect(self.pushButtonUKclicked)
-
-       
-
-
-
-        '''
-'''
-        self.heading = self.findChild(QLabel,"lbl_heading")
-        self.buttonAdd = self.findChild(QPushButton,"add_btn")
-        self.buttonDelete = self.findChild(QPushButton,"del_btn")
-        self.buttonDelete.setEnabled(False) # disable delete button
-
-        self.comboBox1 = self.findChild(QComboBox,"cmb_one")
-        self.listWidget  = self.findChild(QListWidget,"lst_widget")
-        self.txtBrowser = self.findChild(QTextBrowser,"txt_browser_one")
-        self.progBar = self.findChild(QProgressBar, "progbar_one")
-
-        self.progBar.setMaximum(100)
-        self.progBar.setValue(50)
-
-        self.labelProgressComplete = self.findChild(QLabel, "lbl_progress_complete")
-        self.labelProgressComplete.setHidden(True)                                     # hide label until progress bar is full
-
-        """ set event handlers """
-        self.buttonAdd.clicked.connect(self.add_btn_clicked)
-        self.buttonDelete.clicked.connect(self.del_btn_clicked)
-        self.listWidget.clicked.connect(self.listwidget_clicked)
-        self.lwModel = self.listWidget.model()                             # need to pick up events on the list
-        self.lwModel.rowsInserted.connect(self.checkListLength)            # Any time an element is added run function
-        self.lwModel.rowsRemoved.connect(self.checkListLength)             # Any time an element is removed run function
-
-        self.show()
-    
-    #end def
-
-    def pushButtonAUSclicked(self):
-        uic.loadUi("australia_nodeclick.ui",self)
-    def pushButtonUSAclicked(self):
-        uic.loadUi("america_nodeclick.ui",self)
-    def pushButtonUKclicked(self):
-        uic.loadUi("Ukpopout.ui",self)
-        self.pushButtonENG = self.findChild(QPushButton, "pushButtonENG")
-        self.pushButtonENG.clicked.connect(self.pushButtonENGclicked)
-    def pushButtonENGclicked(self):
-        uic.loadUi("england_nodeclick.ui")
-
-
-    
-    '''
-'''
-    def listwidget_clicked(self):
-    
-        print(self.listWidget.currentRow())
-        if self.listWidget.count() > 0:
-            self.buttonDelete.setEnabled(True) # enable delete button
-        else:
-            self.buttonDelete.setEnabled(False) # disable delete button
-        #end if
-
-    #end def
-
-
-    def checkListLength(self):
-
-        if self.listWidget.count() > 0:
-            self.buttonDelete.setEnabled(True) # disable delete button
-        else:
-            self.buttonDelete.setEnabled(False)
-        # end if
-
-    #end def
-
-
-    def add_btn_clicked(self):
-
-        """ add item from list and combo box"""
-
-        now = datetime.now()
-        d1 = now.strftime("%d/%m/%Y %H:%M:%S")
-
-        # add item to list and combo box
-        self.listWidget.addItem(d1)
-        self.comboBox1.addItem(d1)
-
-        if self.progBar.value() < self.progBar.maximum():
-
-            self.progBar.setValue(self.progBar.value()+5)
-
-        else:
-
-            self.buttonAdd.setEnabled(False)
-            self.labelProgressComplete.setHidden(False)                                 # show full label
-            self.progBar.setEnabled(False)                                              # disable prgress bar
-            self.showCompleteMessage("Progress Complete")
-
-        #endif
-
-    #end def
-
-
-    def showCompleteMessage(self, message_text):
-
-        msg = QMessageBox()
-        msg.setStyleSheet("background-color: rgb(200, 200, 0); color rgb(255, 200, 0)")
-        msg.setIcon(QMessageBox.Information)
-        msg.setWindowTitle(message_text)
-        msg.setText("Have a Nice Day!")
-        msg.setStandardButtons(QMessageBox.Ok)
-        msg.exec_()
-
-    #enddef
-
-
-    def del_btn_clicked(self):
-
-        """ remove item from list and combo box"""
-        if self.listWidget.count() == 0:
-            print("Nope")
-        #endif
-
-        if self.listWidget.count() > 0:
-            self.listWidget.takeItem(self.listWidget.currentRow())
-        else:
-            print("Nope - not in list")
-        #endif
-
-    #enddef
-
-#endclass
-'''
-'''
-# main starts here - init App
-app = QApplication(sys.argv)
-window = My_UI()
-app.exec_()
-sys.exit(app.exec_())
-'''
-
-'''
-jhvkjvjhgf
-'''

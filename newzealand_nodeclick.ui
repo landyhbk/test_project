@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>382</width>
+    <width>383</width>
     <height>576</height>
    </rect>
   </property>
@@ -14,12 +14,38 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButtonNZLTEAMS">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Teams</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNZLSTADIUMS">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stadiums</string>
+    </property>
+   </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>152</width>
+      <width>151</width>
       <height>91</height>
      </rect>
     </property>
@@ -30,7 +56,7 @@
      </font>
     </property>
     <property name="text">
-     <string>    England</string>
+     <string>New Zealand</string>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -49,42 +75,16 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Flag-England.webp</pixmap>
+     <pixmap>nzlflag.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonENGGRAPH">
+   <widget class="QPushButton" name="pushButtonNZLTROPHIES">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>420</y>
-      <width>341</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Graph place holder</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonENGFIX">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>250</y>
-      <width>341</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Fixtures and results</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonENGTROPHIES">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
+      <x>20</x>
       <y>340</y>
       <width>341</width>
       <height>81</height>
@@ -94,23 +94,36 @@
      <string>Trophies</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonENGSTADIUMS">
+   <widget class="QPushButton" name="pushButtonNZLGRAPH">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>140</y>
-      <width>171</width>
+      <x>20</x>
+      <y>420</y>
+      <width>341</width>
       <height>91</height>
      </rect>
     </property>
     <property name="text">
-     <string>Stadiums</string>
+     <string>Graph place holder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNZLFIX">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>341</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fixtures and results</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>310</x>
       <y>260</y>
       <width>41</width>
       <height>31</height>
@@ -120,26 +133,13 @@
      <string>...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonENGTEAMS">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>171</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Teams</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>382</width>
+     <width>383</width>
      <height>24</height>
     </rect>
    </property>

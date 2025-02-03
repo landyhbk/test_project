@@ -26,6 +26,9 @@
     <property name="text">
      <string>Choose from the countries in the UK:</string>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButtonENG">
     <property name="geometry">
@@ -72,7 +75,7 @@
      <string>Scotland</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButtonWAL">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -85,7 +88,7 @@
      <string>Wales</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButtonIRE">
     <property name="geometry">
      <rect>
       <x>0</x>
