@@ -35,6 +35,8 @@ class My_UI(QMainWindow):
         self.pushButtonFRA = self.findChild(QtWidgets.QPushButton, "pushButtonFRA")
         self.pushButtonARG = self.findChild(QtWidgets.QPushButton, "pushButtonARG")
         self.pushButtonITA = self.findChild(QtWidgets.QPushButton, "pushButtonITA")
+        self.pushButtonFIJ = self.findChild(QtWidgets.QPushButton, "pushButtonFIJ")
+        self.pushButtonJAP = self.findChild(QtWidgets.QPushButton, "pushButtonJAP")
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
@@ -44,6 +46,8 @@ class My_UI(QMainWindow):
         self.pushButtonFRA.clicked.connect(self.open_france_window)
         self.pushButtonARG.clicked.connect(self.open_argentina_window)
         self.pushButtonITA.clicked.connect(self.open_italy_window)
+        self.pushButtonFIJ.clicked.connect(self.open_fiji_window)
+        self.pushButtonJAP.clicked.connect(self.open_japan_window)
 
     def open_australia_window(self):
         self.australia_window = AustraliaWindow()
@@ -76,6 +80,14 @@ class My_UI(QMainWindow):
     def open_italy_window(self):
         self.ita_window = ITAWindow()
         self.ita_window.show()
+
+    def open_fiji_window(self):
+        self.fij_window = FIJWindow()
+        self.fij_window.show()
+
+    def open_japan_window(self):
+        self.jap_window = JAPWindow()
+        self.jap_window.show()
 
 
 class AustraliaWindow(QMainWindow):
@@ -269,17 +281,22 @@ class FRAWindow(QMainWindow):
 class ARGWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("argentina_nodeclick.ui")
+        uic.loadUi("argentina_nodeclick.ui", self)
 
 class ITAWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("italy_nodeclick.ui")
+        uic.loadUi("italy_nodeclick.ui", self)
 
+class FIJWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("fiji_nodeclick.ui", self)
 
-
-
-
+class JAPWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("japan_nodeclick.ui", self)
 
 
 if __name__ == "__main__":
