@@ -37,6 +37,7 @@ class My_UI(QMainWindow):
         self.pushButtonITA = self.findChild(QtWidgets.QPushButton, "pushButtonITA")
         self.pushButtonFIJ = self.findChild(QtWidgets.QPushButton, "pushButtonFIJ")
         self.pushButtonJAP = self.findChild(QtWidgets.QPushButton, "pushButtonJAP")
+        self.pushButtonGEO = self.findChild(QtWidgets.QPushButton, "pushButtonGEO")
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
@@ -48,6 +49,7 @@ class My_UI(QMainWindow):
         self.pushButtonITA.clicked.connect(self.open_italy_window)
         self.pushButtonFIJ.clicked.connect(self.open_fiji_window)
         self.pushButtonJAP.clicked.connect(self.open_japan_window)
+        self.pushButtonGEO.clicked.connect(self.open_georgia_window)
 
     def open_australia_window(self):
         self.australia_window = AustraliaWindow()
@@ -88,6 +90,10 @@ class My_UI(QMainWindow):
     def open_japan_window(self):
         self.jap_window = JAPWindow()
         self.jap_window.show()
+
+    def open_georgia_window(self):
+        self.geo_window = GEOWindow()
+        self.geo_window.show()
 
 
 class AustraliaWindow(QMainWindow):
@@ -297,6 +303,11 @@ class JAPWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("japan_nodeclick.ui", self)
+
+class GEOWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("georgia_nodeclick.ui", self)
 
 
 if __name__ == "__main__":
