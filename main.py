@@ -52,7 +52,7 @@ class My_UI(QMainWindow):
         self.pushButtonGEO.clicked.connect(self.open_georgia_window)
 
     def open_australia_window(self):
-        self.australia_window = AustraliaWindow()
+        self.australia_window = AUSWindow()
         self.australia_window.show()
 
     def open_usa_window(self):
@@ -96,7 +96,7 @@ class My_UI(QMainWindow):
         self.geo_window.show()
 
 
-class AustraliaWindow(QMainWindow):
+class AUSWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("australia_nodeclick.ui", self)
@@ -194,23 +194,23 @@ class UKWindow(QMainWindow):
 
 
     def open_england_window(self):
-        self.england_window = EnglandWindow()
+        self.england_window = ENGWindow()
         self.england_window.show()
 
     def open_scotland_window(self):
-        self.scotland_window = ScotlandWindow()
+        self.scotland_window = SCOWindow()
         self.scotland_window.show()
 
     def open_wales_window(self):
-        self.wales_window = WalesWindow()
+        self.wales_window = WALWindow()
         self.wales_window.show()
 
     def open_ireland_window(self):
-        self.wales_window = IrelandWindow()
+        self.wales_window = IREWindow()
         self.wales_window.show()
 
 
-class EnglandWindow(QMainWindow):
+class ENGWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("england_nodeclick.ui", self)
@@ -249,19 +249,19 @@ class EnglandWindow(QMainWindow):
         )
         QMessageBox.information(self, "Trophies", trophy_info)
 
-class ScotlandWindow(QMainWindow):
+class SCOWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("scotland_nodeclick.ui",self)
         self.show()
 
-class WalesWindow(QMainWindow):
+class WALWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("wales_nodeclick.ui",self)
         self.show()
 
-class IrelandWindow(QMainWindow):
+class IREWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi("ireland_nodeclick.ui",self)
