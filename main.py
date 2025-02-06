@@ -179,7 +179,7 @@ class USAWindow(QMainWindow):
 class UKWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("UKpopout.ui", self)
+        uic.loadUi("UKpopoutMAP.ui", self)
         self.show()
 
         
