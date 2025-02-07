@@ -94,7 +94,7 @@
      <string>Trophies</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonSAGRAPH">
+   <widget class="QPushButton" name="pushButtonSAPLAYERS">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -104,7 +104,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Graph place holder</string>
+     <string>Players</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonSAFIX">

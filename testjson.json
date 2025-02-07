@@ -5,46 +5,55 @@
             "Waratahs",
             "Reds",
             "Rebels",
-            "Force"
+            "Western Force"
         ],
         "Stadiums": [
-            {
-                "name": "ANZ Stadium",
-                "capacity": 83500,
-                "city": "Sydney"
-            },
-            {
-                "name": "Suncorp Stadium",
-                "capacity": 52500,
-                "city": "Brisbane"
-            }
+            {"name": "ANZ Stadium", "capacity": 83500, "city": "Sydney"},
+            {"name": "Suncorp Stadium", "capacity": 52500, "city": "Brisbane"},
+            {"name": "Melbourne Rectangular Stadium", "capacity": 30050, "city": "Melbourne"},
+            {"name": "Perth Stadium", "capacity": 60000, "city": "Perth"},
+            {"name": "Hunter Stadium", "capacity": 33000, "city": "Newcastle"}
         ],
         "Fixtures": [
-            {
-                "date": "2024-01-15",
-                "opponent": "New Zealand",
-                "venue": "ANZ Stadium",
-                "result": "Win"
-            },
-            {
-                "date": "2024-02-05",
-                "opponent": "England",
-                "venue": "Twickenham",
-                "result": "Loss"
-            }
+            {"date": "2023-11-18", "opponent": "New Zealand", "venue": "ANZ Stadium", "result": "Win"},
+            {"date": "2023-10-25", "opponent": "England", "venue": "Twickenham", "result": "Loss"},
+            {"date": "2022-07-09", "opponent": "South Africa", "venue": "Suncorp Stadium", "result": "Win"},
+            {"date": "2021-09-04", "opponent": "France", "venue": "ANZ Stadium", "result": "Draw"},
+            {"date": "2020-11-07", "opponent": "Argentina", "venue": "Perth Stadium", "result": "Loss"}
         ],
         "Trophies": [
-            {
-                "name": "Bledisloe Cup",
-                "year_won": [1998, 2000, 2001]
-            },
-            {
-                "name": "Tri Nations Championship",
-                "year_won": [2001, 2011]
-            }
+            {"name": "Bledisloe Cup", "year_won": [1998, 2000, 2001, 2002]},
+            {"name": "Rugby Championship", "year_won": [2011, 2015]},
+            {"name": "World Cup", "year_won": [1991, 1999]}
         ],
-        "Graph": {
-            "place_holder": "Graph data for performance trends"
+        "Players": {
+            "Starting XV": {
+                "1": "James Slipper (Prop)",
+                "2": "Dave Porecki (Hooker)",
+                "3": "Allan Alaalatoa (Prop)",
+                "4": "Izack Rodda (Lock)",
+                "5": "Darcy Swain (Lock)",
+                "6": "Rob Leota (Flanker)",
+                "7": "Michael Hooper (Flanker)",
+                "8": "Rob Valetini (Number 8)",
+                "9": "Nic White (Scrum-half)",
+                "10": "Quade Cooper (Fly-half)",
+                "11": "Marika Koroibete (Wing)",
+                "12": "Hunter Paisami (Centre)",
+                "13": "Len Ikitau (Centre)",
+                "14": "Tom Wright (Wing)",
+                "15": "Andrew Kellaway (Fullback)"
+            },
+            "Substitutes": {
+                "16": "Folau Fainga'a (Hooker)",
+                "17": "Scott Sio (Prop)",
+                "18": "Taniela Tupou (Prop)",
+                "19": "Nick Frost (Lock)",
+                "20": "Pete Samu (Flanker)",
+                "21": "Jake Gordon (Scrum-half)",
+                "22": "Noah Lolesio (Fly-half)",
+                "23": "Jordan Petaia (Back)"
+            }
         }
     },
     "England": {
@@ -52,42 +61,115 @@
             "Harlequins",
             "Saracens",
             "Leicester Tigers",
-            "Northhampton Saints",
-            "Bath",
-            "Sale",
-            "Newcastle Falcons",
-            "Exeter Cheifs",
-            "Gloucester",
-            "Bristol Bears"
+            "Northampton Saints",
+            "Bath Rugby"
         ],
         "Stadiums": [
-            {
-                "name": "Twickenham Stadium",
-                "capacity": 82000,
-                "city": "London"
-            },
-            {
-                "name": "Twickenham Stoop",
-                "capacity": 14000,
-                "city": "London"
-            }
+            {"name": "Twickenham Stadium", "capacity": 82000, "city": "London"},
+            {"name": "Welford Road", "capacity": 25949, "city": "Leicester"},
+            {"name": "Recreation Ground", "capacity": 14000, "city": "Bath"},
+            {"name": "Franklin's Gardens", "capacity": 15149, "city": "Northampton"},
+            {"name": "StoneX Stadium", "capacity": 10250, "city": "London"}
         ],
         "Fixtures": [
-            {
-                "date": "2024-03-10",
-                "opponent": "Australia",
-                "venue": "Twickenham",
-                "result": "Win"
-            }
+            {"date": "2023-10-28", "opponent": "South Africa", "venue": "Twickenham", "result": "Win"},
+            {"date": "2022-07-16", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"},
+            {"date": "2021-11-20", "opponent": "New Zealand", "venue": "Twickenham", "result": "Win"},
+            {"date": "2020-10-24", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+            {"date": "2019-11-02", "opponent": "South Africa", "venue": "Yokohama", "result": "Loss"}
         ],
         "Trophies": [
-            {
-                "name": "Six Nations Championship",
-                "year_won": [2003, 2016, 2017]
-            }
+            {"name": "Six Nations Championship", "year_won": [2000, 2001, 2003, 2011, 2016, 2017]},
+            {"name": "World Cup", "year_won": [2003]}
         ],
-        "Graph": {
-            "place_holder": "Graph data for England performance trends"
+        "Players": {
+            "Starting XV": {
+                "1": "Ellis Genge (Prop)",
+                "2": "Jamie George (Hooker)",
+                "3": "Kyle Sinckler (Prop)",
+                "4": "Maro Itoje (Lock)",
+                "5": "Jonny Hill (Lock)",
+                "6": "Courtney Lawes (Flanker)",
+                "7": "Tom Curry (Flanker)",
+                "8": "Billy Vunipola (Number 8)",
+                "9": "Ben Youngs (Scrum-half)",
+                "10": "Marcus Smith (Fly-half)",
+                "11": "Jonny May (Wing)",
+                "12": "Owen Farrell (Centre)",
+                "13": "Henry Slade (Centre)",
+                "14": "Anthony Watson (Wing)",
+                "15": "Freddie Steward (Fullback)"
+            },
+            "Substitutes": {
+                "16": "Luke Cowan-Dickie (Hooker)",
+                "17": "Joe Marler (Prop)",
+                "18": "Will Stuart (Prop)",
+                "19": "Charlie Ewels (Lock)",
+                "20": "Sam Underhill (Flanker)",
+                "21": "Raffi Quirke (Scrum-half)",
+                "22": "George Ford (Fly-half)",
+                "23": "Max Malins (Back)"
+            }
+        }
+    },
+        "South Africa": {
+            "Teams": [
+                "Stormers",
+                "Bulls",
+                "Sharks",
+                "Lions",
+                "Cheetahs"
+            ],
+            "Stadiums": [
+                {"name": "Ellis Park Stadium", "capacity": 62000, "city": "Johannesburg"},
+                {"name": "Loftus Versfeld", "capacity": 51762, "city": "Pretoria"},
+                {"name": "Newlands Stadium", "capacity": 51000, "city": "Cape Town"},
+                {"name": "Kings Park Stadium", "capacity": 52500, "city": "Durban"},
+                {"name": "Nelson Mandela Bay Stadium", "capacity": 46000, "city": "Port Elizabeth"}
+            ],
+            "Fixtures": [
+                {"date": "2023-10-28", "opponent": "New Zealand", "venue": "Ellis Park", "result": "Win"},
+                {"date": "2022-07-16", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"},
+                {"date": "2021-11-20", "opponent": "England", "venue": "Twickenham", "result": "Win"},
+                {"date": "2020-10-24", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+                {"date": "2019-11-02", "opponent": "England", "venue": "Yokohama", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Rugby Championship", "year_won": [1998, 2004, 2009, 2019, 2023]},
+                {"name": "World Cup", "year_won": [1995, 2007, 2019, 2023]},
+                {"name": "British & Irish Lions Series", "year_won": [1962, 1968, 1974, 1980, 1997, 2009, 2021]}
+            ],
+            "Players": {
+                "Starting XV": {
+                    "1": "Steven Kitshoff (Prop)",
+                    "2": "Malcolm Marx (Hooker)",
+                    "3": "Frans Malherbe (Prop)",
+                    "4": "Eben Etzebeth (Lock)",
+                    "5": "Franco Mostert (Lock)",
+                    "6": "Siya Kolisi (Flanker)",
+                    "7": "Pieter-Steph du Toit (Flanker)",
+                    "8": "Jasper Wiese (Number 8)",
+                    "9": "Faf de Klerk (Scrum-half)",
+                    "10": "Handré Pollard (Fly-half)",
+                    "11": "Makazole Mapimpi (Wing)",
+                    "12": "Damian de Allende (Centre)",
+                    "13": "Jesse Kriel (Centre)",
+                    "14": "Cheslin Kolbe (Wing)",
+                    "15": "Willie le Roux (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Bongi Mbonambi (Hooker)",
+                    "17": "Ox Nche (Prop)",
+                    "18": "Trevor Nyakane (Prop)",
+                    "19": "Marvin Orie (Lock)",
+                    "20": "Kwagga Smith (Flanker)",
+                    "21": "Jaden Hendrikse (Scrum-half)",
+                    "22": "Manie Libbok (Fly-half)",
+                    "23": "Canan Moodie (Back)"
+                }
+            }
         }
     }
-}
+    
+
+

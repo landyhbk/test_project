@@ -55,7 +55,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonENGGRAPH">
+   <widget class="QPushButton" name="pushButtonENGPLAYERS">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -65,7 +65,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Graph place holder</string>
+     <string>Players</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonENGFIX">

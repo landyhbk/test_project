@@ -110,6 +110,7 @@ class AUSWindow(QMainWindow):
         self.pushButtonAUSSTADIUMS.clicked.connect(self.show_stadiums)
         self.pushButtonAUSFIX.clicked.connect(self.show_fixtures)
         self.pushButtonAUSTROPHIES.clicked.connect(self.show_trophies)
+        self.pushButtonAUSPLAYERS.clicked.connect(self.show_players)
 
     
 
@@ -167,6 +168,20 @@ class AUSWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)
         msg.exec_()
 
+    def show_players(self):
+        players = self.data["Australia"]["Players"]
+        starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
+        substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
+        player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Players")  # Title of the message box
+        msg.setText(player_info)  # Set the content
+        msg.setIcon(QMessageBox.NoIcon)  # No default icon
+        msg.setStandardButtons(QMessageBox.Close)  # Add close button
+        msg.exec_()
+
+
 
 class USAWindow(QMainWindow):
     def __init__(self):
@@ -223,31 +238,75 @@ class ENGWindow(QMainWindow):
         self.pushButtonENGSTADIUMS.clicked.connect(self.show_stadiums)
         self.pushButtonENGFIX.clicked.connect(self.show_fixtures)
         self.pushButtonENGTROPHIES.clicked.connect(self.show_trophies)
+        self.pushButtonENGPLAYERS.clicked.connect(self.show_players)
 
     def show_teams(self):
         teams = self.data["England"]["Teams"]
-        QMessageBox.information(self, "Teams", "\n\n".join(teams))
+        team_info = "\n\n".join(teams)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Teams")  
+        msg.setText(team_info)       
+        msg.setIcon(QMessageBox.NoIcon)  
+        msg.setStandardButtons(QMessageBox.Close)  
+        msg.exec_()
+
 
     def show_stadiums(self):
         stadiums = self.data["England"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
-        QMessageBox.information(self, "Stadiums", stadium_info)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Stadiums")
+        msg.setText(stadium_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
 
     def show_fixtures(self):
         fixtures = self.data["England"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
-        QMessageBox.information(self, "Fixtures", fixture_info)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Fixtures")
+        msg.setText(fixture_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
 
     def show_trophies(self):
         trophies = self.data["England"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
-        QMessageBox.information(self, "Trophies", trophy_info)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Trophies")
+        msg.setText(trophy_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+    def show_players(self):
+        players = self.data["England"]["Players"]
+        starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
+        substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
+        player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Players")  # Title of the message box
+        msg.setText(player_info)  # Set the content
+        msg.setIcon(QMessageBox.NoIcon)  # No default icon
+        msg.setStandardButtons(QMessageBox.Close)  # Add close button
+        msg.exec_()
+
 
 class SCOWindow(QMainWindow):
     def __init__(self):
@@ -272,6 +331,82 @@ class SAWindow(QMainWindow):
         super().__init__()
         uic.loadUi("southafrica_nodeclick.ui", self)
         self.show()
+
+        self.data = load_json()
+
+        
+        self.pushButtonSATEAMS.clicked.connect(self.show_teams)
+        self.pushButtonSASTADIUMS.clicked.connect(self.show_stadiums)
+        self.pushButtonSAFIX.clicked.connect(self.show_fixtures)
+        self.pushButtonSATROPHIES.clicked.connect(self.show_trophies)
+        self.pushButtonSAPLAYERS.clicked.connect(self.show_players)
+
+    def show_teams(self):
+        teams = self.data["South Africa"]["Teams"]
+        team_info = "\n\n".join(teams)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Teams")  
+        msg.setText(team_info)       
+        msg.setIcon(QMessageBox.NoIcon)  
+        msg.setStandardButtons(QMessageBox.Close)  
+        msg.exec_()
+
+
+    def show_stadiums(self):
+        stadiums = self.data["South Africa"]["Stadiums"]
+        stadium_info = "\n\n".join(
+            [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Stadiums")
+        msg.setText(stadium_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+    def show_fixtures(self):
+        fixtures = self.data["South Africa"]["Fixtures"]
+        fixture_info = "\n\n".join(
+            [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Fixtures")
+        msg.setText(fixture_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+    def show_trophies(self):
+        trophies = self.data["South Africa"]["Trophies"]
+        trophy_info = "\n\n".join(
+            [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Trophies")
+        msg.setText(trophy_info)
+        msg.setIcon(QMessageBox.NoIcon)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+    def show_players(self):
+        players = self.data["South Africa"]["Players"]
+        starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
+        substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
+        player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle("Players")  # Title of the message box
+        msg.setText(player_info)  # Set the content
+        msg.setIcon(QMessageBox.NoIcon)  # No default icon
+        msg.setStandardButtons(QMessageBox.Close)  # Add close button
+        msg.exec_()
 
 class NZLWindow(QMainWindow):
     def __init__(self):

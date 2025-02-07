@@ -120,7 +120,7 @@
      <string>Trophies</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonAUSGRAPH">
+   <widget class="QPushButton" name="pushButtonAUSPLAYERS">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -130,7 +130,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Graph place holder</string>
+     <string>Players</string>
     </property>
    </widget>
   </widget>
