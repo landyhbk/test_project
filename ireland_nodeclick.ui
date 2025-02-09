@@ -107,7 +107,7 @@
      <string>Teams</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonIREGRAPH">
+   <widget class="QPushButton" name="pushButtonIREPLAYERS">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -117,7 +117,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Graph place holder</string>
+     <string>Players</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonIRESTADIUMS">
