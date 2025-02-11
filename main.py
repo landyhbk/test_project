@@ -4,7 +4,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, \
     QLabel, QTextBrowser, QComboBox, QListWidget, QProgressBar, QMessageBox, QDialogButtonBox
 from PyQt5 import uic
 from datetime import datetime
-import json 
+import json
+import random
+
 
 
 TIME_LIMIT = 100
@@ -38,6 +40,7 @@ class My_UI(QMainWindow):
         self.pushButtonFIJ = self.findChild(QtWidgets.QPushButton, "pushButtonFIJ")
         self.pushButtonJAP = self.findChild(QtWidgets.QPushButton, "pushButtonJAP")
         self.pushButtonGEO = self.findChild(QtWidgets.QPushButton, "pushButtonGEO")
+        
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
@@ -50,6 +53,7 @@ class My_UI(QMainWindow):
         self.pushButtonFIJ.clicked.connect(self.open_fiji_window)
         self.pushButtonJAP.clicked.connect(self.open_japan_window)
         self.pushButtonGEO.clicked.connect(self.open_georgia_window)
+        
 
     def open_australia_window(self):
         self.australia_window = AUSWindow()
@@ -94,7 +98,7 @@ class My_UI(QMainWindow):
     def open_georgia_window(self):
         self.geo_window = GEOWindow()
         self.geo_window.show()
-
+    
 
 class AUSWindow(QMainWindow):
     def __init__(self):
@@ -112,7 +116,6 @@ class AUSWindow(QMainWindow):
         self.pushButtonAUSTROPHIES.clicked.connect(self.show_trophies)
         self.pushButtonAUSPLAYERS.clicked.connect(self.show_players)
 
-    
 
     def show_teams(self):
         teams = self.data["Australia"]["Teams"]
