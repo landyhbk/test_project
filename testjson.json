@@ -27,6 +27,18 @@
                 {"name": "Rugby Championship", "year_won": [2011, 2015]},
                 {"name": "World Cup", "year_won": [1991, 1999]}
             ],
+            "FactBox": {
+                "Facts": [
+                    "Australia was the first team to win two Rugby World Cups (1991 & 1999), before any other nation managed to do so.",
+                    "In 1991, Nick Farr-Jones led the Wallabies to victory, but in 1999, John Eales became the youngest captain (29 years old) to win the tournament.",
+                    "The 'Giteau Law' was named after Matt Giteau and allowed overseas-based players with 60+ caps to be eligible for Wallabies selection.",
+                    "Australia once had three brothers (Mark, Glen, and Gary Ella) all playing in the same Test match.",
+                    "David Campese was famous for inventing the 'goose step,' a sudden skip that confused defenders.",
+                    "Australia hosted the 2003 Rugby World Cup and reached the final but lost to England in extra time after Jonny Wilkinson's famous drop goal.",
+                    "Drew Mitchell (2007) and Julian Savea (2015) share the record for most tries in a single Rugby World Cup (8 tries each).",
+                    "Australia completed a Grand Slam tour of the UK & Ireland in 1984, defeating England, Ireland, Scotland, and Wales."
+                ]
+            },
             "Players": {
                 "Starting XV": {
                     "1": "James Slipper (Prop)",
@@ -83,6 +95,18 @@
                 {"name": "Six Nations Championship", "year_won": [2000, 2001, 2003, 2011, 2016, 2017]},
                 {"name": "World Cup", "year_won": [2003]}
             ],
+            "FactBox": {
+                "Facts": [
+                    "The game is said to have been created when William Webb Ellis 'picked up the ball and ran' at Rugby School in 1823.",
+                    "England is the only Northern Hemisphere team to win a Rugby World Cup, doing so in 2003 against Australia.",
+                    "Ben Youngs (127 caps) holds the record for most appearances for England.",
+                    "Wilkinson, known for his iconic 2003 World Cup-winning drop goal, had a ritual of bouncing the ball twice before every kick.",
+                    "England fans adopted 'Swing Low, Sweet Chariot' as an unofficial anthem in 1988 when England defeated Ireland.",
+                    "England's largest victory was 134-0 against Romania in 2001.",
+                    "Jason Robinson scored after 38 minutes in the 2003 final, England's only try in that game.",
+                    "Jonny Wilkinson holds England's all-time points record with 1,179 points in international rugby."
+                ]
+            },
             "Players": {
                 "Starting XV": {
                     "1": "Ellis Genge (Prop)",
@@ -142,9 +166,14 @@
                 ],
                 "FactBox": {
                     "Facts": [
-                        "South Africa has won the world cup 4 times",
-                        "The Springboks first international game was 1891",
-                        "Siya Kolisi was South Africa's first black captian"
+                        "South Africa holds the record for the most Rugby World Cup wins (4) (1995, 2007, 2019, 2023).",
+                        "After Nelson Mandela wore a Springbok jersey in the 1995 World Cup final, it became a symbol of unity post-Apartheid.",
+                        "Siya Kolisi became the first black captain of South Africa in 2018 and led them to a historic 2019 World Cup victory.",
+                        "South Africa's Andries Bekker (2.08m / 6'10) is one of the tallest rugby players in history.",
+                        "Chester Williams, the only black player in the 1995 Springbok squad, became a symbol of change in South African rugby.",
+                        "South Africa is the only team to have beaten the All Blacks in a Rugby World Cup final (2023).",
+                        "The 1995 Rugby World Cup victory was turned into the Hollywood movie 'Invictus', starring Matt Damon and Morgan Freeman.",
+                        "South Africa is the only team to have won every Rugby World Cup final they've played in (1995, 2007, 2019, 2023)."   
                     ]
                 }, 
                 "Players": {

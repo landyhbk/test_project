@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1035</width>
-    <height>600</height>
+    <width>1147</width>
+    <height>672</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>381</width>
+      <width>361</width>
       <height>31</height>
      </rect>
     </property>
@@ -50,9 +50,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
-      <width>191</width>
-      <height>221</height>
+      <y>240</y>
+      <width>201</width>
+      <height>321</height>
      </rect>
     </property>
     <item>
@@ -61,7 +61,25 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>18</pointsize>
+       <pointsize>24</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>--------------------------</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>5</pointsize>
       </font>
      </property>
     </item>
@@ -69,60 +87,110 @@
      <property name="text">
       <string>- South Africa</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
     </item>
     <item>
      <property name="text">
       <string>- Ireland</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
     </item>
     <item>
      <property name="text">
       <string>- New Zealand</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
     </item>
     <item>
      <property name="text">
       <string>- France</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
     </item>
     <item>
      <property name="text">
       <string>- Argentina</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
     </item>
     <item>
      <property name="text">
       <string>- Scotland</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
     </item>
     <item>
      <property name="text">
       <string>- England</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
     </item>
     <item>
      <property name="text">
       <string>- Australia</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
     </item>
     <item>
      <property name="text">
       <string>- Fiji</string>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
     </item>
     <item>
      <property name="text">
       <string>- Italy</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
     </item>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>60</y>
-      <width>841</width>
-      <height>461</height>
+      <width>951</width>
+      <height>541</height>
      </rect>
     </property>
     <property name="text">
@@ -138,8 +206,8 @@
    <widget class="QPushButton" name="pushButtonAUS">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>390</y>
+      <x>980</x>
+      <y>450</y>
       <width>81</width>
       <height>61</height>
      </rect>
@@ -154,8 +222,8 @@
    <widget class="QPushButton" name="pushButtonUSA">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>180</y>
+      <x>270</x>
+      <y>200</y>
       <width>91</width>
       <height>51</height>
      </rect>
@@ -170,8 +238,8 @@
    <widget class="QPushButton" name="pushButtonUK">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>120</y>
+      <x>590</x>
+      <y>130</y>
       <width>31</width>
       <height>41</height>
      </rect>
@@ -186,8 +254,8 @@
    <widget class="QPushButton" name="pushButtonSA">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>410</y>
+      <x>650</x>
+      <y>480</y>
       <width>71</width>
       <height>41</height>
      </rect>
@@ -202,8 +270,8 @@
    <widget class="QPushButton" name="pushButtonNZL">
     <property name="geometry">
      <rect>
-      <x>960</x>
-      <y>460</y>
+      <x>1070</x>
+      <y>530</y>
       <width>61</width>
       <height>41</height>
      </rect>
@@ -218,8 +286,8 @@
    <widget class="QPushButton" name="pushButtonARG">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>420</y>
+      <x>420</x>
+      <y>470</y>
       <width>51</width>
       <height>71</height>
      </rect>
@@ -234,8 +302,8 @@
    <widget class="QPushButton" name="pushButtonFRA">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>160</y>
+      <x>610</x>
+      <y>180</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -250,8 +318,8 @@
    <widget class="QPushButton" name="pushButtonITA">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>180</y>
+      <x>640</x>
+      <y>210</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -266,8 +334,8 @@
    <widget class="QPushButton" name="pushButtonFIJ">
     <property name="geometry">
      <rect>
-      <x>970</x>
-      <y>350</y>
+      <x>1090</x>
+      <y>390</y>
       <width>51</width>
       <height>41</height>
      </rect>
@@ -282,8 +350,8 @@
    <widget class="QPushButton" name="pushButtonJAP">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>160</y>
+      <x>970</x>
+      <y>180</y>
       <width>41</width>
       <height>51</height>
      </rect>
@@ -298,8 +366,8 @@
    <widget class="QPushButton" name="pushButtonGEO">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>170</y>
+      <x>720</x>
+      <y>180</y>
       <width>41</width>
       <height>31</height>
      </rect>
@@ -315,23 +383,60 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
-      <width>191</width>
-      <height>221</height>
+      <y>110</y>
+      <width>201</width>
+      <height>121</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonREFRESHFACT">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>170</x>
       <y>80</y>
       <width>41</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;&gt;</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>refreshbutton.png</normaloff>refreshbutton.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fact Box</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>searchbutton2.png</normaloff>searchbutton2.png</iconset>
     </property>
    </widget>
   </widget>
@@ -340,7 +445,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1035</width>
+     <width>1147</width>
      <height>24</height>
     </rect>
    </property>
