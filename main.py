@@ -28,7 +28,41 @@ class My_UI(QMainWindow):
         uic.loadUi("firstGUIdraft.ui", self)
         self.show()
 
-        
+        # Load JSON Data
+        self.data = load_json()  
+
+        # Ensure correct widget references
+        self.textFactContent = self.findChild(QTextBrowser, "textBrowserFACTBOX")
+        self.pushButtonFactRefresh = self.findChild(QPushButton, "pushButtonREFRESHFACT")
+
+        # Connect Refresh Button
+        self.pushButtonFactRefresh.clicked.connect(self.refresh_fact_box)
+
+        # Show a random fact at startup
+        self.show_random_fact()
+
+    def show_random_fact(self):
+        """Displays a random fact from any country at startup or on refresh."""
+        all_facts = []
+
+        # Ensure "Countries" exists in JSON
+        if "Countries" in self.data:
+            for country, details in self.data["Countries"].items():
+                if "FactBox" in details and "Facts" in details["FactBox"]:
+                    all_facts.extend(details["FactBox"]["Facts"])
+
+
+        # Select and display a random fact
+        if all_facts:
+            random_fact = random.choice(all_facts)
+            self.textFactContent.setText(random_fact)
+        else:
+            self.textFactContent.setText("No facts available.")
+
+    def refresh_fact_box(self):
+        """Refreshes the fact box when the refresh button is clicked."""
+        self.show_random_fact()
+
         self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
         self.pushButtonUSA = self.findChild(QtWidgets.QPushButton, "pushButtonUSA")
         self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
@@ -118,7 +152,7 @@ class AUSWindow(QMainWindow):
 
 
     def show_teams(self):
-        teams = self.data["Australia"]["Teams"]
+        teams = self.data["Countries"]["Australia"]["Teams"]
         team_info = "\n\n".join(teams)
 
         # Create a custom QMessageBox
@@ -130,7 +164,7 @@ class AUSWindow(QMainWindow):
         msg.exec_()
 
     def show_stadiums(self):
-        stadiums = self.data["Australia"]["Stadiums"]
+        stadiums = self.data["Countries"]["Australia"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
@@ -145,7 +179,7 @@ class AUSWindow(QMainWindow):
         
        
     def show_fixtures(self):
-        fixtures = self.data["Australia"]["Fixtures"]
+        fixtures = self.data["Countries"]["Australia"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
@@ -159,7 +193,7 @@ class AUSWindow(QMainWindow):
 
 
     def show_trophies(self):
-        trophies = self.data["Australia"]["Trophies"]
+        trophies = self.data["Countries"]["Australia"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
@@ -172,7 +206,7 @@ class AUSWindow(QMainWindow):
         msg.exec_()
 
     def show_players(self):
-        players = self.data["Australia"]["Players"]
+        players = self.data["Countries"]["Australia"]["Players"]
         starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
         substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
         player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
@@ -244,7 +278,7 @@ class ENGWindow(QMainWindow):
         self.pushButtonENGPLAYERS.clicked.connect(self.show_players)
 
     def show_teams(self):
-        teams = self.data["England"]["Teams"]
+        teams = self.data["Countries"]["England"]["Teams"]
         team_info = "\n\n".join(teams)
 
         msg = QMessageBox(self)
@@ -256,7 +290,7 @@ class ENGWindow(QMainWindow):
 
 
     def show_stadiums(self):
-        stadiums = self.data["England"]["Stadiums"]
+        stadiums = self.data["Countries"]["England"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
@@ -270,7 +304,7 @@ class ENGWindow(QMainWindow):
 
 
     def show_fixtures(self):
-        fixtures = self.data["England"]["Fixtures"]
+        fixtures = self.data["Countries"]["England"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
@@ -284,7 +318,7 @@ class ENGWindow(QMainWindow):
 
 
     def show_trophies(self):
-        trophies = self.data["England"]["Trophies"]
+        trophies = self.data["Countries"]["England"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
@@ -298,7 +332,7 @@ class ENGWindow(QMainWindow):
 
 
     def show_players(self):
-        players = self.data["England"]["Players"]
+        players = self.data["Countries"]["England"]["Players"]
         starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
         substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
         player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
@@ -345,7 +379,7 @@ class SAWindow(QMainWindow):
         self.pushButtonSAPLAYERS.clicked.connect(self.show_players)
 
     def show_teams(self):
-        teams = self.data["South Africa"]["Teams"]
+        teams = self.data["Countries"]["South Africa"]["Teams"]
         team_info = "\n\n".join(teams)
 
         msg = QMessageBox(self)
@@ -357,7 +391,7 @@ class SAWindow(QMainWindow):
 
 
     def show_stadiums(self):
-        stadiums = self.data["South Africa"]["Stadiums"]
+        stadiums = self.data["Countries"]["South Africa"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
@@ -371,7 +405,7 @@ class SAWindow(QMainWindow):
 
 
     def show_fixtures(self):
-        fixtures = self.data["South Africa"]["Fixtures"]
+        fixtures = self.data["Countries"]["South Africa"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
@@ -385,7 +419,7 @@ class SAWindow(QMainWindow):
 
 
     def show_trophies(self):
-        trophies = self.data["South Africa"]["Trophies"]
+        trophies = self.data["Countries"]["South Africa"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
@@ -399,7 +433,7 @@ class SAWindow(QMainWindow):
 
 
     def show_players(self):
-        players = self.data["South Africa"]["Players"]
+        players = self.data["Countries"]["South Africa"]["Players"]
         starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
         substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
         player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
