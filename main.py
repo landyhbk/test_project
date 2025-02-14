@@ -31,7 +31,7 @@ class My_UI(QMainWindow):
         # Load JSON Data
         self.data = load_json()  
 
-        # Ensure correct widget references
+           # Ensure correct widget references
         self.textFactContent = self.findChild(QTextBrowser, "textBrowserFACTBOX")
         self.pushButtonFactRefresh = self.findChild(QPushButton, "pushButtonREFRESHFACT")
 
@@ -63,30 +63,53 @@ class My_UI(QMainWindow):
         """Refreshes the fact box when the refresh button is clicked."""
         self.show_random_fact()
 
+
         self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
+        self.pushButtonAUS2 = self.findChild(QtWidgets.QPushButton, "pushButtonAUS2")
         self.pushButtonUSA = self.findChild(QtWidgets.QPushButton, "pushButtonUSA")
         self.pushButtonUK = self.findChild(QtWidgets.QPushButton, "pushButtonUK")
         self.pushButtonSA = self.findChild(QtWidgets.QPushButton, "pushButtonSA")
+        self.pushButtonSA2 = self.findChild(QtWidgets.QPushButton, "pushButtonSA2")
         self.pushButtonNZL = self.findChild(QtWidgets.QPushButton, "pushButtonNZL")
+        self.pushButtonNZL2 = self.findChild(QtWidgets.QPushButton, "pushButtonNZL2")
         self.pushButtonFRA = self.findChild(QtWidgets.QPushButton, "pushButtonFRA")
+        self.pushButtonFRA2 = self.findChild(QtWidgets.QPushButton, "pushButtonFRA2")
         self.pushButtonARG = self.findChild(QtWidgets.QPushButton, "pushButtonARG")
+        self.pushButtonARG2 = self.findChild(QtWidgets.QPushButton, "pushButtonARG2")
         self.pushButtonITA = self.findChild(QtWidgets.QPushButton, "pushButtonITA")
+        self.pushButtonITA2 = self.findChild(QtWidgets.QPushButton, "pushButtonITA2")
         self.pushButtonFIJ = self.findChild(QtWidgets.QPushButton, "pushButtonFIJ")
+        self.pushButtonFIJ2 = self.findChild(QtWidgets.QPushButton, "pushButtonFIJ2")
         self.pushButtonJAP = self.findChild(QtWidgets.QPushButton, "pushButtonJAP")
         self.pushButtonGEO = self.findChild(QtWidgets.QPushButton, "pushButtonGEO")
+        self.pushButtonENG2 = self.findChild(QtWidgets.QPushButton, "pushButtonENG2")
+        self.pushButtonSCO2 = self.findChild(QtWidgets.QPushButton, "pushButtonSCO2")
+        self.pushButtonIRE2 = self.findChild(QtWidgets.QPushButton, "pushButtonIRE2")
         
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
+        self.pushButtonAUS2.clicked.connect(self.open_australia_window)
         self.pushButtonUSA.clicked.connect(self.open_usa_window)
         self.pushButtonUK.clicked.connect(self.open_uk_window)
         self.pushButtonSA.clicked.connect(self.open_southafrica_window)
+        self.pushButtonSA2.clicked.connect(self.open_southafrica_window)
         self.pushButtonNZL.clicked.connect(self.open_newzealand_window)
+        self.pushButtonNZL2.clicked.connect(self.open_newzealand_window)
         self.pushButtonFRA.clicked.connect(self.open_france_window)
+        self.pushButtonFRA2.clicked.connect(self.open_france_window)
         self.pushButtonARG.clicked.connect(self.open_argentina_window)
+        self.pushButtonARG2.clicked.connect(self.open_argentina_window)
         self.pushButtonITA.clicked.connect(self.open_italy_window)
+        self.pushButtonITA2.clicked.connect(self.open_italy_window)
         self.pushButtonFIJ.clicked.connect(self.open_fiji_window)
+        self.pushButtonFIJ2.clicked.connect(self.open_fiji_window)
         self.pushButtonJAP.clicked.connect(self.open_japan_window)
         self.pushButtonGEO.clicked.connect(self.open_georgia_window)
+        self.pushButtonENG2.clicked.connect(self.open_england_window)
+        self.pushButtonSCO2.clicked.connect(self.open_scotland_window)
+        self.pushButtonIRE2.clicked.connect(self.open_ireland_window)
+        
+        
         
 
     def open_australia_window(self):
@@ -132,6 +155,23 @@ class My_UI(QMainWindow):
     def open_georgia_window(self):
         self.geo_window = GEOWindow()
         self.geo_window.show()
+
+    def open_england_window(self):
+        self.england_window = ENGWindow()
+        self.england_window.show()
+
+    def open_scotland_window(self):
+        self.scotland_window = SCOWindow()
+        self.scotland_window.show()
+
+    def open_wales_window(self):
+        self.wales_window = WALWindow()
+        self.wales_window.show()
+
+    def open_ireland_window(self):
+        self.wales_window = IREWindow()
+        self.wales_window.show()
+
     
 
 class AUSWindow(QMainWindow):
@@ -218,7 +258,7 @@ class AUSWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
-
+        
 
 class USAWindow(QMainWindow):
     def __init__(self):
