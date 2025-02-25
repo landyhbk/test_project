@@ -146,11 +146,20 @@
                     "Cheetahs"
                 ],
                 "Stadiums": [
+                    {"name": "FNB Stadium", "capacity": 94736, "city": "Johannesburg"},
                     {"name": "Ellis Park Stadium", "capacity": 62000, "city": "Johannesburg"},
-                    {"name": "Loftus Versfeld", "capacity": 51762, "city": "Pretoria"},
-                    {"name": "Newlands Stadium", "capacity": 51000, "city": "Cape Town"},
-                    {"name": "Kings Park Stadium", "capacity": 52500, "city": "Durban"},
-                    {"name": "Nelson Mandela Bay Stadium", "capacity": 46000, "city": "Port Elizabeth"}
+                    {"name": "Cape Town Stadium", "capacity": 58000, "city": "Cape Town"},
+                    {"name": "Moses Mabhida Stadium", "capacity": 56000, "city": "Durban"},
+                    {"name": "Loftus Versfeld Stadium", "capacity": 51762, "city": "Pretoria"},
+                    {"name": "Kings Park Stadium", "capacity": 52000, "city": "Durban"},
+                    {"name": "Newlands Stadium", "capacity": 50000, "city": "Cape Town"},
+                    {"name": "Nelson Mandela Bay Stadium", "capacity": 46000, "city": "Port Elizabeth"},
+                    {"name": "Peter Mokaba Stadium", "capacity": 41500, "city": "Polokwane"},
+                    {"name": "Free State Stadium", "capacity": 40091, "city": "Bloemfontein"},
+                    {"name": "Mbombela Stadium", "capacity": 40000, "city": "Nelspruit"},
+                    {"name": "Royal Bafokeng Stadium", "capacity": 38000, "city": "Rustenburg"},
+                    {"name": "Athlone Stadium", "capacity": 34000, "city": "Cape Town"},
+                    {"name": "Harry Gwala Stadium", "capacity": 12500, "city": "Pietermaritzburg"}
                 ],
                 "Fixtures": [
                     {"date": "2023-10-28", "opponent": "New Zealand", "venue": "Ellis Park", "result": "Win"},
