@@ -69,13 +69,89 @@
                 }
             }
         },
+            "America": {
+                "Teams": [
+                    "New England Free Jacks",
+                    "Seattle Seawolves",
+                    "San Diego Legion",
+                    "Houston SaberCats",
+                    "Rugby New York",
+                    "Chicago Hounds",
+                    "Old Glory DC",
+                    "NOLA Gold",
+                    "Utah Warriors",
+                    "Dallas Jackals"
+                ],
+                "Stadiums": [
+                    {"name": "Infinity Park", "capacity": 5000, "city": "Glendale, Colorado"},
+                    {"name": "SeatGeek Stadium", "capacity": 28000, "city": "Bridgeview, Illinois"},
+                    {"name": "Snapdragon Stadium", "capacity": 35000, "city": "San Diego, California"},
+                    {"name": "Aveva Stadium", "capacity": 4000, "city": "Houston, Texas"},
+                    {"name": "Choctaw Stadium", "capacity": 48000, "city": "Arlington, Texas"}
+                ],
+                "Fixtures": [
+                    {"date": "2023-11-25", "opponent": "Canada", "venue": "Infinity Park", "result": "Win"},
+                    {"date": "2023-10-14", "opponent": "Uruguay", "venue": "SeatGeek Stadium", "result": "Loss"},
+                    {"date": "2022-07-16", "opponent": "Chile", "venue": "Aveva Stadium", "result": "Loss"},
+                    {"date": "2021-09-04", "opponent": "New Zealand", "venue": "FedEx Field", "result": "Loss"},
+                    {"date": "2020-10-30", "opponent": "Argentina", "venue": "Snapdragon Stadium", "result": "Loss"}
+                ],
+                "Trophies": [
+                    {"name": "Americas Rugby Championship", "year_won": [2017, 2018]},
+                    {"name": "Pacific Nations Cup", "year_won": [2019]}
+                ],
+                "FactBox": {
+                    "Facts": [
+                        "The USA Eagles won the first two Rugby World Cups in history (1920 and 1924), when rugby was an Olympic event.",
+                        "Major League Rugby (MLR) was founded in 2017 and has helped professionalize the sport in the USA.",
+                        "The USA's largest-ever rugby crowd was 61,500 for the match against the New Zealand All Blacks in 2014 at Soldier Field, Chicago.",
+                        "USA international Blaine Scully captained both the USA Eagles and Cardiff Blues in his career.",
+                        "The USA Rugby team has qualified for every Rugby World Cup since 1987, except for 2023.",
+                        "Rugby has seen major growth in the USA, especially in colleges, with over 900 collegiate teams nationwide."
+                    ]
+                },
+                "Players": {
+                    "Starting XV": {
+                        "1": "David Ainu’u (Prop)",
+                        "2": "Dylan Fawsitt (Hooker)",
+                        "3": "Paul Mullen (Prop)",
+                        "4": "Nick Civetta (Lock)",
+                        "5": "Greg Peterson (Lock)",
+                        "6": "Hanco Germishuys (Flanker)",
+                        "7": "Ben Bonasso (Flanker)",
+                        "8": "Cam Dolan (Number 8)",
+                        "9": "Ruben de Haas (Scrum-half)",
+                        "10": "AJ MacGinty (Fly-half)",
+                        "11": "Marcel Brache (Wing)",
+                        "12": "Bryce Campbell (Centre)",
+                        "13": "Paul Lasike (Centre)",
+                        "14": "Christian Dyer (Wing)",
+                        "15": "Will Hooley (Fullback)"
+                    },
+                    "Substitutes": {
+                        "16": "Kapeli Pifeleti (Hooker)",
+                        "17": "Olive Kilifi (Prop)",
+                        "18": "Dino Waldren (Prop)",
+                        "19": "Cam Orr (Lock)",
+                        "20": "Riekert Hattingh (Flanker)",
+                        "21": "Nate Augspurger (Scrum-half)",
+                        "22": "Luke Carty (Fly-half)",
+                        "23": "Ryan Matyas (Back)"
+                    }
+                }
+            },
         "England": {
             "Teams": [
+                "Bath",
+                "Bristol Bears",
+                "Exeter Chiefs",
+                "Gloucester",
                 "Harlequins",
-                "Saracens",
                 "Leicester Tigers",
+                "Newcastle Falcons",
                 "Northampton Saints",
-                "Bath Rugby"
+                "Sale Sharks",
+                "Saracens"
             ],
             "Stadiums": [
                 {"name": "Twickenham Stadium", "capacity": 82000, "city": "London"},
