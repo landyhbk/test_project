@@ -1,5 +1,723 @@
 {
     "Countries": {
+        "Argentina": {
+            "Teams": [
+                "Jaguares",
+                "Pampas XV",
+                "Ceibos Rugby",
+                "Buenos Aires Cricket & Rugby Club",
+                "Hindú Club",
+                "CASI",
+                "SIC",
+                "CUBA",
+                "Newman Club",
+                "Belgrano Athletic Club"
+            ],
+            "Stadiums": [
+                {"name": "Estadio José Amalfitani", "capacity": 49540, "city": "Buenos Aires"},
+                {"name": "Estadio Padre Ernesto Martearena", "capacity": 20508, "city": "Salta"},
+                {"name": "Estadio Malvinas Argentinas", "capacity": 40268, "city": "Mendoza"},
+                {"name": "Estadio Ciudad de La Plata", "capacity": 53000, "city": "La Plata"},
+                {"name": "Estadio Charrúa", "capacity": 14000, "city": "Montevideo (used for some matches)"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-18", "opponent": "South Africa", "venue": "Estadio José Amalfitani", "result": "Loss"},
+                {"date": "2023-10-07", "opponent": "England", "venue": "Stade de Marseille", "result": "Loss"},
+                {"date": "2022-07-23", "opponent": "Australia", "venue": "Estadio Padre Ernesto Martearena", "result": "Win"},
+                {"date": "2021-08-21", "opponent": "New Zealand", "venue": "Suncorp Stadium", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "New Zealand", "venue": "Bankwest Stadium", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Rugby Championship", "year_won": []},
+                {"name": "South American Rugby Championship", "year_won": [1951, 1958, 1961, 1964, 1967, 1969, 1971, 1973, 1975, 1977, 1979, 1981, 1983, 1985, 1987, 1989, 1991, 1993, 1995, 1997, 1998, 2000, 2001, 2002, 2003]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Argentina's national rugby team, Los Pumas, famously defeated New Zealand for the first time ever in 2020.",
+                    "The Jaguares were Argentina's professional Super Rugby team until 2020.",
+                    "Argentina finished third in the 2007 Rugby World Cup, their best-ever performance.",
+                    "The Pumas' first-ever test match victory over England came in 1990.",
+                    "Many of Argentina’s top rugby players compete in European leagues, particularly in France and England.",
+                    "Argentina has won multiple South American Rugby Championships, dominating the region for decades."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Thomas Gallo (Prop)",
+                    "2": "Julián Montoya (Hooker)",
+                    "3": "Francisco Gómez Kodela (Prop)",
+                    "4": "Guido Petti (Lock)",
+                    "5": "Tomás Lavanini (Lock)",
+                    "6": "Marcos Kremer (Flanker)",
+                    "7": "Pablo Matera (Flanker)",
+                    "8": "Rodrigo Bruni (Number 8)",
+                    "9": "Tomás Cubelli (Scrum-half)",
+                    "10": "Nicolás Sánchez (Fly-half)",
+                    "11": "Juan Imhoff (Wing)",
+                    "12": "Santiago Chocobares (Centre)",
+                    "13": "Matías Orlando (Centre)",
+                    "14": "Emiliano Boffelli (Wing)",
+                    "15": "Juan Cruz Mallía (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Santiago Socino (Hooker)",
+                    "17": "Nahuel Tetaz Chaparro (Prop)",
+                    "18": "Enrique Pieretto (Prop)",
+                    "19": "Lucas Paulos (Lock)",
+                    "20": "Facundo Isa (Flanker)",
+                    "21": "Gonzalo Bertranou (Scrum-half)",
+                    "22": "Santiago Carreras (Fly-half)",
+                    "23": "Lucio Cinti (Back)"
+                }
+            }
+        },
+        "Scotland": {
+            "Teams": [
+                "Edinburgh Rugby",
+                "Glasgow Warriors",
+                "Heriot's Rugby Club",
+                "Melrose RFC",
+                "Watsonians RFC",
+                "Ayr RFC",
+                "Stirling County RFC",
+                "Boroughmuir RFC",
+                "Currie Chieftains",
+                "Hawick RFC"
+            ],
+            "Stadiums": [
+                {"name": "Murrayfield Stadium", "capacity": 67800, "city": "Edinburgh"},
+                {"name": "Scotstoun Stadium", "capacity": 7351, "city": "Glasgow"},
+                {"name": "The Greenyards", "capacity": 5000, "city": "Melrose"},
+                {"name": "Goldenacre", "capacity": 3000, "city": "Edinburgh"},
+                {"name": "Old Anniesland", "capacity": 2000, "city": "Glasgow"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "England", "venue": "Murrayfield Stadium", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Ireland", "venue": "Aviva Stadium", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Wales", "venue": "Principality Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "Italy", "venue": "Murrayfield Stadium", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Six Nations Championship", "year_won": [1999]},
+                {"name": "Calcutta Cup", "year_won": [2021, 2022, 2023]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Scotland won the last Five Nations Championship in 1999 before it became the Six Nations.",
+                    "Murrayfield Stadium in Edinburgh is the largest stadium in Scotland and the home of Scottish Rugby.",
+                    "Scotland’s national team played its first-ever match in 1871 against England, making it one of the oldest international rugby fixtures.",
+                    "The Calcutta Cup, awarded for matches between Scotland and England, has been contested since 1879.",
+                    "Scotland famously defeated France in 2021 to deny them a Six Nations title.",
+                    "Stuart Hogg is Scotland’s all-time leading try-scorer."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Pierre Schoeman (Prop)",
+                    "2": "George Turner (Hooker)",
+                    "3": "Zander Fagerson (Prop)",
+                    "4": "Grant Gilchrist (Lock)",
+                    "5": "Jonny Gray (Lock)",
+                    "6": "Jamie Ritchie (Flanker)",
+                    "7": "Hamish Watson (Flanker)",
+                    "8": "Matt Fagerson (Number 8)",
+                    "9": "Ali Price (Scrum-half)",
+                    "10": "Finn Russell (Fly-half)",
+                    "11": "Duhan van der Merwe (Wing)",
+                    "12": "Sione Tuipulotu (Centre)",
+                    "13": "Huw Jones (Centre)",
+                    "14": "Darcy Graham (Wing)",
+                    "15": "Stuart Hogg (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Ewan Ashman (Hooker)",
+                    "17": "Jamie Bhatti (Prop)",
+                    "18": "WP Nel (Prop)",
+                    "19": "Scott Cummings (Lock)",
+                    "20": "Rory Darge (Flanker)",
+                    "21": "Ben White (Scrum-half)",
+                    "22": "Blair Kinghorn (Fly-half)",
+                    "23": "Kyle Steyn (Back)"
+                }
+            }
+        },
+        "Wales": {
+            "Teams": [
+                "Cardiff Rugby",
+                "Ospreys",
+                "Scarlets",
+                "Dragons RFC",
+                "Llandovery RFC",
+                "Pontypridd RFC",
+                "Ebbw Vale RFC",
+                "Merthyr RFC",
+                "RGC 1404",
+                "Aberavon RFC"
+            ],
+            "Stadiums": [
+                {"name": "Principality Stadium", "capacity": 73500, "city": "Cardiff"},
+                {"name": "Cardiff Arms Park", "capacity": 12500, "city": "Cardiff"},
+                {"name": "Parc y Scarlets", "capacity": 14870, "city": "Llanelli"},
+                {"name": "Rodney Parade", "capacity": 8600, "city": "Newport"},
+                {"name": "Liberty Stadium", "capacity": 20827, "city": "Swansea"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "Scotland", "venue": "Principality Stadium", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "England", "venue": "Twickenham", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Ireland", "venue": "Aviva Stadium", "result": "Loss"},
+                {"date": "2021-09-04", "opponent": "France", "venue": "Principality Stadium", "result": "Win"},
+                {"date": "2020-11-14", "opponent": "Italy", "venue": "Stadio Olimpico", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Six Nations Championship", "year_won": [2005, 2008, 2012, 2013, 2019]},
+                {"name": "Triple Crown", "year_won": [2005, 2008, 2012, 2019, 2021]},
+                {"name": "Grand Slam", "year_won": [2005, 2008, 2012, 2019]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Wales has won more Six Nations Grand Slams (12) than any other team.",
+                    "The national stadium, now called the Principality Stadium, was originally known as the Millennium Stadium.",
+                    "Shane Williams is Wales' all-time leading try scorer with 58 tries.",
+                    "In 2019, Wales was ranked No. 1 in the world for the first time in history.",
+                    "Wales won the first-ever Rugby World Cup match in 1987, defeating Ireland.",
+                    "The Welsh national anthem 'Hen Wlad Fy Nhadau' is one of the most passionately sung anthems in rugby."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Gareth Thomas (Prop)",
+                    "2": "Dewi Lake (Hooker)",
+                    "3": "Tomas Francis (Prop)",
+                    "4": "Adam Beard (Lock)",
+                    "5": "Will Rowlands (Lock)",
+                    "6": "Jac Morgan (Flanker)",
+                    "7": "Tommy Reffell (Flanker)",
+                    "8": "Taulupe Faletau (Number 8)",
+                    "9": "Tomos Williams (Scrum-half)",
+                    "10": "Dan Biggar (Fly-half)",
+                    "11": "Josh Adams (Wing)",
+                    "12": "Nick Tompkins (Centre)",
+                    "13": "George North (Centre)",
+                    "14": "Louis Rees-Zammit (Wing)",
+                    "15": "Liam Williams (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Ryan Elias (Hooker)",
+                    "17": "Nicky Smith (Prop)",
+                    "18": "Dillon Lewis (Prop)",
+                    "19": "Dafydd Jenkins (Lock)",
+                    "20": "Christ Tshiunza (Flanker)",
+                    "21": "Kieran Hardy (Scrum-half)",
+                    "22": "Sam Costelow (Fly-half)",
+                    "23": "Alex Cuthbert (Back)"
+                }
+            }
+        },
+        "Ireland": {
+            "Teams": [
+                "Leinster Rugby",
+                "Munster Rugby",
+                "Ulster Rugby",
+                "Connacht Rugby",
+                "Lansdowne FC",
+                "Cork Constitution",
+                "Shannon RFC",
+                "Clontarf FC",
+                "Garryowen FC",
+                "Terenure College RFC"
+            ],
+            "Stadiums": [
+                {"name": "Aviva Stadium", "capacity": 51700, "city": "Dublin"},
+                {"name": "Thomond Park", "capacity": 25000, "city": "Limerick"},
+                {"name": "Kingspan Stadium", "capacity": 18368, "city": "Belfast"},
+                {"name": "Sportsground", "capacity": 8129, "city": "Galway"},
+                {"name": "RDS Arena", "capacity": 18600, "city": "Dublin"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "England", "venue": "Aviva Stadium", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Scotland", "venue": "Murrayfield Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "Wales", "venue": "Principality Stadium", "result": "Win"},
+                {"date": "2020-11-14", "opponent": "Italy", "venue": "Aviva Stadium", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Six Nations Championship", "year_won": [2009, 2014, 2015, 2018, 2023]},
+                {"name": "Triple Crown", "year_won": [2004, 2006, 2007, 2009, 2018, 2022]},
+                {"name": "Grand Slam", "year_won": [1948, 2009, 2018, 2023]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Ireland won their first Grand Slam in 1948 and repeated the feat in 2009, 2018, and 2023.",
+                    "Aviva Stadium in Dublin is the home of Irish rugby and also hosts football matches.",
+                    "Ireland has won the Six Nations Championship multiple times, including Grand Slam victories.",
+                    "Brian O’Driscoll is Ireland’s all-time leading try scorer and one of the greatest players in history.",
+                    "Ireland became the No. 1 ranked team in world rugby in 2019 for the first time ever.",
+                    "Johnny Sexton is one of the most successful fly-halves in international rugby history."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Andrew Porter (Prop)",
+                    "2": "Dan Sheehan (Hooker)",
+                    "3": "Tadhg Furlong (Prop)",
+                    "4": "James Ryan (Lock)",
+                    "5": "Iain Henderson (Lock)",
+                    "6": "Peter O'Mahony (Flanker)",
+                    "7": "Josh van der Flier (Flanker)",
+                    "8": "Caelan Doris (Number 8)",
+                    "9": "Jamison Gibson-Park (Scrum-half)",
+                    "10": "Johnny Sexton (Fly-half)",
+                    "11": "James Lowe (Wing)",
+                    "12": "Bundee Aki (Centre)",
+                    "13": "Garry Ringrose (Centre)",
+                    "14": "Mack Hansen (Wing)",
+                    "15": "Hugo Keenan (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Rob Herring (Hooker)",
+                    "17": "Cian Healy (Prop)",
+                    "18": "Finlay Bealham (Prop)",
+                    "19": "Ryan Baird (Lock)",
+                    "20": "Jack Conan (Flanker)",
+                    "21": "Conor Murray (Scrum-half)",
+                    "22": "Ross Byrne (Fly-half)",
+                    "23": "Robbie Henshaw (Back)"
+                }
+            }
+        },
+        "New Zealand": {
+            "Teams": [
+                "Auckland Blues",
+                "Canterbury Crusaders",
+                "Wellington Hurricanes",
+                "Waikato Chiefs",
+                "Otago Highlanders",
+                "Tasman Mako",
+                "Taranaki Bulls",
+                "Hawke's Bay Magpies",
+                "Manawatu Turbos",
+                "North Harbour Rugby"
+            ],
+            "Stadiums": [
+                {"name": "Eden Park", "capacity": 50000, "city": "Auckland"},
+                {"name": "Forsyth Barr Stadium", "capacity": 30500, "city": "Dunedin"},
+                {"name": "Sky Stadium", "capacity": 34500, "city": "Wellington"},
+                {"name": "FMG Stadium Waikato", "capacity": 25111, "city": "Hamilton"},
+                {"name": "Orangetheory Stadium", "capacity": 18000, "city": "Christchurch"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "South Africa", "venue": "Eden Park", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "England", "venue": "Twickenham", "result": "Win"},
+                {"date": "2022-07-16", "opponent": "Australia", "venue": "Sky Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "Argentina", "venue": "Bankwest Stadium", "result": "Loss"}
+            ],
+            "Trophies": [
+                {"name": "Rugby World Cup", "year_won": [1987, 2011, 2015]},
+                {"name": "The Rugby Championship", "year_won": [1996, 1997, 1999, 2002, 2003, 2005, 2006, 2007, 2008, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2020, 2021]},
+                {"name": "Bledisloe Cup", "year_won": [1931, 1932, 1934, 1936, 1938, 1946, 1947, 1949, 1951, 1952, 1955, 1957, 1958, 1962, 1963, 1964, 1967, 1970, 1972, 1976, 1978, 1980, 1981, 1982, 1983, 1984, 1986, 1988, 1989, 1990, 1992, 1993, 1995, 1996, 1997, 1998, 2000, 2003, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "New Zealand is the most successful international rugby team in history, with a winning percentage of over 75%.",
+                    "The All Blacks performed the Haka, a traditional Māori war dance, before every match since 1905.",
+                    "New Zealand won the first-ever Rugby World Cup in 1987, defeating France in the final.",
+                    "Richie McCaw holds the record for the most test matches as captain (110) and the most test wins (131).",
+                    "Jonah Lomu, one of the most famous rugby players in history, revolutionized the sport in the 1995 Rugby World Cup.",
+                    "New Zealand has won the Bledisloe Cup more times than any other nation."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Ethan de Groot (Prop)",
+                    "2": "Codie Taylor (Hooker)",
+                    "3": "Tyrel Lomax (Prop)",
+                    "4": "Brodie Retallick (Lock)",
+                    "5": "Sam Whitelock (Lock)",
+                    "6": "Shannon Frizell (Flanker)",
+                    "7": "Sam Cane (Flanker)",
+                    "8": "Ardie Savea (Number 8)",
+                    "9": "Aaron Smith (Scrum-half)",
+                    "10": "Richie Mo'unga (Fly-half)",
+                    "11": "Caleb Clarke (Wing)",
+                    "12": "Jordie Barrett (Centre)",
+                    "13": "Rieko Ioane (Centre)",
+                    "14": "Will Jordan (Wing)",
+                    "15": "Beauden Barrett (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Dane Coles (Hooker)",
+                    "17": "Ofa Tu'ungafasi (Prop)",
+                    "18": "Nepo Laulala (Prop)",
+                    "19": "Scott Barrett (Lock)",
+                    "20": "Dalton Papali'i (Flanker)",
+                    "21": "Finlay Christie (Scrum-half)",
+                    "22": "Damian McKenzie (Fly-half)",
+                    "23": "Leicester Fainga'anuku (Back)"
+                }
+            }
+        },
+        "France": {
+            "Teams": [
+                "Toulouse",
+                "La Rochelle",
+                "Racing 92",
+                "Stade Français",
+                "Clermont Auvergne",
+                "Lyon OU",
+                "Castres Olympique",
+                "Montpellier Hérault",
+                "Bordeaux Bègles",
+                "Toulon"
+            ],
+            "Stadiums": [
+                {"name": "Stade de France", "capacity": 81338, "city": "Saint-Denis"},
+                {"name": "Stade Ernest-Wallon", "capacity": 19500, "city": "Toulouse"},
+                {"name": "Stade Marcel-Michelin", "capacity": 19022, "city": "Clermont-Ferrand"},
+                {"name": "Matmut Atlantique", "capacity": 42115, "city": "Bordeaux"},
+                {"name": "Stade Mayol", "capacity": 18000, "city": "Toulon"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "England", "venue": "Stade de France", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Ireland", "venue": "Aviva Stadium", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Scotland", "venue": "Murrayfield Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "Wales", "venue": "Principality Stadium", "result": "Win"},
+                {"date": "2020-11-14", "opponent": "Italy", "venue": "Stade de France", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Six Nations Championship", "year_won": [1954, 1955, 1959, 1961, 1962, 1967, 1970, 1973, 1977, 1981, 1983, 1986, 1987, 1989, 1993, 1997, 1998, 2002, 2004, 2006, 2007, 2010, 2022]},
+                {"name": "Grand Slam", "year_won": [1968, 1977, 1981, 1987, 1997, 1998, 2002, 2004, 2010, 2022]},
+                {"name": "Rugby World Cup Finalists", "year_won": [1987, 1999, 2011]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "France has reached the Rugby World Cup final three times (1987, 1999, 2011) but has never won the tournament.",
+                    "The national team is known as 'Les Bleus' due to their blue jerseys.",
+                    "The first-ever international rugby match played in France was against New Zealand in 1906.",
+                    "The Six Nations Championship is a historic tournament in which France competes annually against England, Ireland, Scotland, Wales, and Italy.",
+                    "Antoine Dupont, regarded as one of the best scrum-halves in the world, won the World Rugby Player of the Year award in 2021.",
+                    "Stade de France, the largest stadium in France, has hosted Rugby World Cup finals and is home to the national team."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Cyril Baille (Prop)",
+                    "2": "Julien Marchand (Hooker)",
+                    "3": "Uini Atonio (Prop)",
+                    "4": "Thibaud Flament (Lock)",
+                    "5": "Paul Willemse (Lock)",
+                    "6": "François Cros (Flanker)",
+                    "7": "Charles Ollivon (Flanker)",
+                    "8": "Grégory Alldritt (Number 8)",
+                    "9": "Antoine Dupont (Scrum-half)",
+                    "10": "Romain Ntamack (Fly-half)",
+                    "11": "Damian Penaud (Wing)",
+                    "12": "Jonathan Danty (Centre)",
+                    "13": "Gaël Fickou (Centre)",
+                    "14": "Gabin Villière (Wing)",
+                    "15": "Thomas Ramos (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Peato Mauvaka (Hooker)",
+                    "17": "Jean-Baptiste Gros (Prop)",
+                    "18": "Demba Bamba (Prop)",
+                    "19": "Romain Taofifénua (Lock)",
+                    "20": "Sekou Macalou (Flanker)",
+                    "21": "Maxime Lucu (Scrum-half)",
+                    "22": "Matthieu Jalibert (Fly-half)",
+                    "23": "Yoram Moefana (Back)"
+                }
+            }
+        },
+        "Italy": {
+            "Teams": [
+                "Benetton Rugby",
+                "Zebre Parma",
+                "Petrarca Padova",
+                "Calvisano",
+                "Rovigo Delta",
+                "Viadana",
+                "Fiamme Oro",
+                "Colorno Rugby",
+                "Valorugby Emilia",
+                "Lazio Rugby"
+            ],
+            "Stadiums": [
+                {"name": "Stadio Olimpico", "capacity": 72698, "city": "Rome"},
+                {"name": "Stadio Sergio Lanfranchi", "capacity": 5000, "city": "Parma"},
+                {"name": "Stadio Monigo", "capacity": 6000, "city": "Treviso"},
+                {"name": "Stadio Mario Battaglini", "capacity": 4500, "city": "Rovigo"},
+                {"name": "Stadio Plebiscito", "capacity": 8000, "city": "Padova"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "France", "venue": "Stadio Olimpico", "result": "Loss"},
+                {"date": "2023-10-14", "opponent": "Wales", "venue": "Principality Stadium", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Scotland", "venue": "Murrayfield Stadium", "result": "Loss"},
+                {"date": "2021-09-04", "opponent": "Ireland", "venue": "Aviva Stadium", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "England", "venue": "Twickenham", "result": "Loss"}
+            ],
+            "Trophies": [
+                {"name": "Six Nations Wooden Spoon", "year_won": [2001, 2002, 2005, 2006, 2007, 2009, 2011, 2014, 2016, 2017, 2018, 2019, 2020, 2021]},
+                {"name": "FIRA Trophy", "year_won": [1995, 1997]},
+                {"name": "Autumn Nations Cup", "year_won": []}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Italy joined the Six Nations Championship in 2000, making it the first expansion since the tournament was formed.",
+                    "Italy's greatest Six Nations victory came in 2007 when they defeated Scotland and Wales in the same tournament.",
+                    "Sergio Parisse is Italy’s most-capped player and is considered one of the best number eights in rugby history.",
+                    "Italy’s rugby team has never progressed beyond the group stage of a Rugby World Cup.",
+                    "Stadio Olimpico in Rome is the home of Italian rugby and also hosts football matches for AS Roma and Lazio.",
+                    "In 2022, Italy secured a historic win against Wales in Cardiff, ending a 36-game Six Nations losing streak."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Danilo Fischetti (Prop)",
+                    "2": "Gianmarco Lucchesi (Hooker)",
+                    "3": "Marco Riccioni (Prop)",
+                    "4": "Niccolò Cannone (Lock)",
+                    "5": "Federico Ruzza (Lock)",
+                    "6": "Sebastian Negri (Flanker)",
+                    "7": "Michele Lamaro (Flanker)",
+                    "8": "Lorenzo Cannone (Number 8)",
+                    "9": "Stephen Varney (Scrum-half)",
+                    "10": "Paolo Garbisi (Fly-half)",
+                    "11": "Monty Ioane (Wing)",
+                    "12": "Tommaso Menoncello (Centre)",
+                    "13": "Juan Ignacio Brex (Centre)",
+                    "14": "Ange Capuozzo (Wing)",
+                    "15": "Tommaso Allan (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Luca Bigi (Hooker)",
+                    "17": "Ivan Nemer (Prop)",
+                    "18": "Pietro Ceccarelli (Prop)",
+                    "19": "David Sisi (Lock)",
+                    "20": "Manuel Zuliani (Flanker)",
+                    "21": "Alessandro Fusco (Scrum-half)",
+                    "22": "Giacomo Da Re (Fly-half)",
+                    "23": "Pierre Bruno (Back)"
+                }
+            }
+        },
+        "Fiji": {
+            "Teams": [
+                "Fijian Drua",
+                "Suva Rugby Club",
+                "Nadroga Rugby",
+                "Naitasiri Rugby",
+                "Lautoka Rugby",
+                "Tailevu Rugby",
+                "Namosi Rugby",
+                "Northland Rugby",
+                "Rewa Rugby",
+                "Ovalau Rugby"
+            ],
+            "Stadiums": [
+                {"name": "ANZ National Stadium", "capacity": 15500, "city": "Suva"},
+                {"name": "Churchill Park", "capacity": 18000, "city": "Lautoka"},
+                {"name": "Ratu Cakobau Park", "capacity": 8000, "city": "Nausori"},
+                {"name": "Lawaqa Park", "capacity": 12000, "city": "Sigatoka"},
+                {"name": "Subrail Park", "capacity": 7000, "city": "Labasa"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "Tonga", "venue": "Churchill Park", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Samoa", "venue": "ANZ National Stadium", "result": "Win"},
+                {"date": "2022-07-16", "opponent": "Japan", "venue": "Prince Chichibu Memorial Stadium", "result": "Loss"},
+                {"date": "2021-09-04", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "Georgia", "venue": "Murrayfield Stadium", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Pacific Nations Cup", "year_won": [1999, 2000, 2001, 2002, 2004, 2006, 2007, 2008, 2013, 2015, 2016, 2017]},
+                {"name": "Rugby World Cup Quarter-Finalists", "year_won": [1987, 2007, 2023]},
+                {"name": "Olympic Gold Medal (Sevens)", "year_won": [2016, 2021]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Fiji is one of the most dominant nations in rugby sevens, winning back-to-back Olympic gold medals in 2016 and 2021.",
+                    "The Fijian Drua joined Super Rugby in 2022, giving Fiji a professional club team in a major league for the first time.",
+                    "Fiji's national team is known for its fast, free-flowing style and incredible offloading skills.",
+                    "Rugby is the most popular sport in Fiji, with many players transitioning from local villages to the international stage.",
+                    "Fiji reached the Rugby World Cup quarter-finals three times: in 1987, 2007, and 2023.",
+                    "Sevens legend Waisale Serevi is considered one of the greatest rugby players of all time."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Eroni Mawi (Prop)",
+                    "2": "Sam Matavesi (Hooker)",
+                    "3": "Luke Tagi (Prop)",
+                    "4": "Tevita Ratuva (Lock)",
+                    "5": "Temo Mayanavanua (Lock)",
+                    "6": "Levani Botia (Flanker)",
+                    "7": "Mesulame Kunavula (Flanker)",
+                    "8": "Viliame Mata (Number 8)",
+                    "9": "Frank Lomani (Scrum-half)",
+                    "10": "Caleb Muntz (Fly-half)",
+                    "11": "Josua Tuisova (Wing)",
+                    "12": "Semi Radradra (Centre)",
+                    "13": "Waisea Nayacalevu (Centre)",
+                    "14": "Vinaya Habosi (Wing)",
+                    "15": "Sireli Maqala (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Tevita Ikanivere (Hooker)",
+                    "17": "Peni Ravai (Prop)",
+                    "18": "Manasa Saulo (Prop)",
+                    "19": "Albert Tuisue (Lock)",
+                    "20": "Meli Derenalagi (Flanker)",
+                    "21": "Simione Kuruvoli (Scrum-half)",
+                    "22": "Teti Tela (Fly-half)",
+                    "23": "Iosefo Masi (Back)"
+                }
+            }
+        },
+        "Japan": {
+            "Teams": [
+                "Tokyo Sungoliath",
+                "Panasonic Wild Knights",
+                "Yamaha Jubilo",
+                "Kobelco Steelers",
+                "Shizuoka Blue Revs",
+                "Toyota Verblitz",
+                "NEC Green Rockets",
+                "NTT Red Hurricanes",
+                "Mitsubishi Dynaboars",
+                "Ricoh Black Rams"
+            ],
+            "Stadiums": [
+                {"name": "Prince Chichibu Memorial Stadium", "capacity": 27000, "city": "Tokyo"},
+                {"name": "Yanmar Stadium Nagai", "capacity": 47300, "city": "Osaka"},
+                {"name": "Hanazono Rugby Stadium", "capacity": 30000, "city": "Osaka"},
+                {"name": "Level-5 Stadium", "capacity": 22000, "city": "Fukuoka"},
+                {"name": "Toyota Stadium", "capacity": 45000, "city": "Toyota"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "South Korea", "venue": "Prince Chichibu Memorial Stadium", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Fiji", "venue": "ANZ National Stadium", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Tonga", "venue": "Toyota Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "New Zealand", "venue": "Eden Park", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"}
+            ],
+            "Trophies": [
+                {"name": "Pacific Nations Cup", "year_won": [2011, 2014, 2019]},
+                {"name": "Asian Rugby Championship", "year_won": [1969, 1970, 1972, 1974, 1976, 1978, 1980, 1982, 1984, 1986, 1988, 1990, 1992, 1994, 1996, 1998, 2000, 2002, 2004, 2006, 2008, 2010]},
+                {"name": "Rugby World Cup Quarter-Finalists", "year_won": [2019]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Japan became the first Asian team to reach the Rugby World Cup quarter-finals in 2019, defeating Ireland and Scotland.",
+                    "The Japanese rugby team is known as the Brave Blossoms.",
+                    "Japan hosted the 2019 Rugby World Cup, which was the first Rugby World Cup held in Asia.",
+                    "Japan defeated South Africa in the 2015 Rugby World Cup in one of the biggest upsets in rugby history.",
+                    "Rugby in Japan has grown rapidly, with the domestic League One attracting international stars.",
+                    "Japan's national team has consistently dominated the Asian Rugby Championship."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Keita Inagaki (Prop)",
+                    "2": "Shota Horie (Hooker)",
+                    "3": "Jiwon Gu (Prop)",
+                    "4": "James Moore (Lock)",
+                    "5": "Jack Cornelsen (Lock)",
+                    "6": "Michael Leitch (Flanker)",
+                    "7": "Lappies Labuschagné (Flanker)",
+                    "8": "Amanaki Mafi (Number 8)",
+                    "9": "Naoto Saito (Scrum-half)",
+                    "10": "Rikiya Matsuda (Fly-half)",
+                    "11": "Kotaro Matsushima (Wing)",
+                    "12": "Ryoto Nakamura (Centre)",
+                    "13": "Dylan Riley (Centre)",
+                    "14": "Lomano Lemeki (Wing)",
+                    "15": "Yutaka Nagare (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Atsushi Sakate (Hooker)",
+                    "17": "Craig Millar (Prop)",
+                    "18": "Koo Ji-won (Prop)",
+                    "19": "Shunsuke Asaoka (Lock)",
+                    "20": "Tevita Tatafu (Flanker)",
+                    "21": "Yusuke Kajimura (Scrum-half)",
+                    "22": "Takuya Yamasawa (Fly-half)",
+                    "23": "Shogo Nakano (Back)"
+                }
+            }
+        },
+        "Georgia": {
+            "Teams": [
+                "Black Lion",
+                "Lelo Saracens",
+                "Kochebi Bolnisi",
+                "Jiki Gori",
+                "Aia Kutaisi",
+                "Batumi RC",
+                "Lokomotivi Tbilisi",
+                "Kharebi Rustavi",
+                "Armazi Tbilisi",
+                "Academia RC"
+            ],
+            "Stadiums": [
+                {"name": "Boris Paichadze Dinamo Arena", "capacity": 54549, "city": "Tbilisi"},
+                {"name": "Avchala Stadium", "capacity": 25000, "city": "Tbilisi"},
+                {"name": "Kutaisi Stadium", "capacity": 19000, "city": "Kutaisi"},
+                {"name": "Rustavi Stadium", "capacity": 10000, "city": "Rustavi"},
+                {"name": "Shevardeni Stadium", "capacity": 2000, "city": "Tbilisi"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "Romania", "venue": "Avchala Stadium", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Spain", "venue": "Estadio Central", "result": "Win"},
+                {"date": "2022-07-16", "opponent": "Portugal", "venue": "Kutaisi Stadium", "result": "Win"},
+                {"date": "2021-09-04", "opponent": "Fiji", "venue": "ANZ National Stadium", "result": "Loss"},
+                {"date": "2020-11-14", "opponent": "Ireland", "venue": "Aviva Stadium", "result": "Loss"}
+            ],
+            "Trophies": [
+                {"name": "Rugby Europe Championship", "year_won": [2001, 2008, 2009, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022]},
+                {"name": "Emerging Nations Cup", "year_won": [2005]},
+                {"name": "Rugby World Cup Participation", "year_won": [2003, 2007, 2011, 2015, 2019, 2023]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "Georgia is the dominant force in the Rugby Europe Championship, winning the tournament multiple times.",
+                    "Rugby is the second most popular sport in Georgia, after football.",
+                    "Georgia made its Rugby World Cup debut in 2003 and has participated in every tournament since.",
+                    "The national team is known as the 'Lelos,' a name derived from a traditional Georgian sport similar to rugby.",
+                    "In 2022, Georgia achieved a historic victory over Italy, further solidifying their push for inclusion in the Six Nations.",
+                    "Many Georgian players are renowned for their strength and often play in top European clubs, especially in France."
+                ]
+            },
+            "Players": {
+                "Starting XV": {
+                    "1": "Guram Gogichashvili (Prop)",
+                    "2": "Shalva Mamukashvili (Hooker)",
+                    "3": "Beka Gigashvili (Prop)",
+                    "4": "Kote Mikautadze (Lock)",
+                    "5": "Nodar Cheishvili (Lock)",
+                    "6": "Beka Saginadze (Flanker)",
+                    "7": "Otar Giorgadze (Flanker)",
+                    "8": "Beka Gorgadze (Number 8)",
+                    "9": "Vasil Lobzhanidze (Scrum-half)",
+                    "10": "Tedo Abzhandadze (Fly-half)",
+                    "11": "Akaki Tabutsadze (Wing)",
+                    "12": "Merab Sharikadze (Centre)",
+                    "13": "Davit Niniashvili (Centre)",
+                    "14": "Alexander Todua (Wing)",
+                    "15": "Lasha Khmaladze (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Jaba Bregvadze (Hooker)",
+                    "17": "Mikheil Nariashvili (Prop)",
+                    "18": "Luka Japaridze (Prop)",
+                    "19": "Grigol Kerdikoshvili (Lock)",
+                    "20": "Giorgi Tkhilaishvili (Flanker)",
+                    "21": "Gela Aprasidze (Scrum-half)",
+                    "22": "Luka Matkava (Fly-half)",
+                    "23": "Tamaz Mchedlidze (Back)"
+                }
+            }
+        },
         "Australia": {
             "Teams": [
                 "Brumbies",
@@ -69,77 +787,77 @@
                 }
             }
         },
-            "America": {
-                "Teams": [
-                    "New England Free Jacks",
-                    "Seattle Seawolves",
-                    "San Diego Legion",
-                    "Houston SaberCats",
-                    "Rugby New York",
-                    "Chicago Hounds",
-                    "Old Glory DC",
-                    "NOLA Gold",
-                    "Utah Warriors",
-                    "Dallas Jackals"
-                ],
-                "Stadiums": [
-                    {"name": "Infinity Park", "capacity": 5000, "city": "Glendale, Colorado"},
-                    {"name": "SeatGeek Stadium", "capacity": 28000, "city": "Bridgeview, Illinois"},
-                    {"name": "Snapdragon Stadium", "capacity": 35000, "city": "San Diego, California"},
-                    {"name": "Aveva Stadium", "capacity": 4000, "city": "Houston, Texas"},
-                    {"name": "Choctaw Stadium", "capacity": 48000, "city": "Arlington, Texas"}
-                ],
-                "Fixtures": [
-                    {"date": "2023-11-25", "opponent": "Canada", "venue": "Infinity Park", "result": "Win"},
-                    {"date": "2023-10-14", "opponent": "Uruguay", "venue": "SeatGeek Stadium", "result": "Loss"},
-                    {"date": "2022-07-16", "opponent": "Chile", "venue": "Aveva Stadium", "result": "Loss"},
-                    {"date": "2021-09-04", "opponent": "New Zealand", "venue": "FedEx Field", "result": "Loss"},
-                    {"date": "2020-10-30", "opponent": "Argentina", "venue": "Snapdragon Stadium", "result": "Loss"}
-                ],
-                "Trophies": [
-                    {"name": "Americas Rugby Championship", "year_won": [2017, 2018]},
-                    {"name": "Pacific Nations Cup", "year_won": [2019]}
-                ],
-                "FactBox": {
-                    "Facts": [
-                        "The USA Eagles won the first two Rugby World Cups in history (1920 and 1924), when rugby was an Olympic event.",
-                        "Major League Rugby (MLR) was founded in 2017 and has helped professionalize the sport in the USA.",
-                        "The USA's largest-ever rugby crowd was 61,500 for the match against the New Zealand All Blacks in 2014 at Soldier Field, Chicago.",
-                        "USA international Blaine Scully captained both the USA Eagles and Cardiff Blues in his career.",
-                        "The USA Rugby team has qualified for every Rugby World Cup since 1987, except for 2023.",
-                        "Rugby has seen major growth in the USA, especially in colleges, with over 900 collegiate teams nationwide."
-                    ]
-                },
-                "Players": {
-                    "Starting XV": {
-                        "1": "David Ainu’u (Prop)",
-                        "2": "Dylan Fawsitt (Hooker)",
-                        "3": "Paul Mullen (Prop)",
-                        "4": "Nick Civetta (Lock)",
-                        "5": "Greg Peterson (Lock)",
-                        "6": "Hanco Germishuys (Flanker)",
-                        "7": "Ben Bonasso (Flanker)",
-                        "8": "Cam Dolan (Number 8)",
-                        "9": "Ruben de Haas (Scrum-half)",
-                        "10": "AJ MacGinty (Fly-half)",
-                        "11": "Marcel Brache (Wing)",
-                        "12": "Bryce Campbell (Centre)",
-                        "13": "Paul Lasike (Centre)",
-                        "14": "Christian Dyer (Wing)",
-                        "15": "Will Hooley (Fullback)"
-                    },
-                    "Substitutes": {
-                        "16": "Kapeli Pifeleti (Hooker)",
-                        "17": "Olive Kilifi (Prop)",
-                        "18": "Dino Waldren (Prop)",
-                        "19": "Cam Orr (Lock)",
-                        "20": "Riekert Hattingh (Flanker)",
-                        "21": "Nate Augspurger (Scrum-half)",
-                        "22": "Luke Carty (Fly-half)",
-                        "23": "Ryan Matyas (Back)"
-                    }
-                }
+        "America": {
+            "Teams": [
+                "New England Free Jacks",
+                "Seattle Seawolves",
+                "San Diego Legion",
+                "Houston SaberCats",
+                "Rugby New York",
+                "Chicago Hounds",
+                "Old Glory DC",
+                "NOLA Gold",
+                "Utah Warriors",
+                "Dallas Jackals"
+            ],
+            "Stadiums": [
+                {"name": "Infinity Park", "capacity": 5000, "city": "Glendale, Colorado"},
+                {"name": "SeatGeek Stadium", "capacity": 28000, "city": "Bridgeview, Illinois"},
+                {"name": "Snapdragon Stadium", "capacity": 35000, "city": "San Diego, California"},
+                {"name": "Aveva Stadium", "capacity": 4000, "city": "Houston, Texas"},
+                {"name": "Choctaw Stadium", "capacity": 48000, "city": "Arlington, Texas"}
+            ],
+            "Fixtures": [
+                {"date": "2023-11-25", "opponent": "Canada", "venue": "Infinity Park", "result": "Win"},
+                {"date": "2023-10-14", "opponent": "Uruguay", "venue": "SeatGeek Stadium", "result": "Loss"},
+                {"date": "2022-07-16", "opponent": "Chile", "venue": "Aveva Stadium", "result": "Loss"},
+                {"date": "2021-09-04", "opponent": "New Zealand", "venue": "FedEx Field", "result": "Loss"},
+                {"date": "2020-10-30", "opponent": "Argentina", "venue": "Snapdragon Stadium", "result": "Loss"}
+            ],
+            "Trophies": [
+                {"name": "Americas Rugby Championship", "year_won": [2017, 2018]},
+                {"name": "Pacific Nations Cup", "year_won": [2019]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "The USA Eagles won the first two Rugby World Cups in history (1920 and 1924), when rugby was an Olympic event.",
+                    "Major League Rugby (MLR) was founded in 2017 and has helped professionalize the sport in the USA.",
+                    "The USA's largest-ever rugby crowd was 61,500 for the match against the New Zealand All Blacks in 2014 at Soldier Field, Chicago.",
+                    "USA international Blaine Scully captained both the USA Eagles and Cardiff Blues in his career.",
+                    "The USA Rugby team has qualified for every Rugby World Cup since 1987, except for 2023.",
+                    "Rugby has seen major growth in the USA, especially in colleges, with over 900 collegiate teams nationwide."
+                ]
             },
+            "Players": {
+                "Starting XV": {
+                    "1": "David Ainu’u (Prop)",
+                    "2": "Dylan Fawsitt (Hooker)",
+                    "3": "Paul Mullen (Prop)",
+                    "4": "Nick Civetta (Lock)",
+                    "5": "Greg Peterson (Lock)",
+                    "6": "Hanco Germishuys (Flanker)",
+                    "7": "Ben Bonasso (Flanker)",
+                    "8": "Cam Dolan (Number 8)",
+                    "9": "Ruben de Haas (Scrum-half)",
+                    "10": "AJ MacGinty (Fly-half)",
+                    "11": "Marcel Brache (Wing)",
+                    "12": "Bryce Campbell (Centre)",
+                    "13": "Paul Lasike (Centre)",
+                    "14": "Christian Dyer (Wing)",
+                    "15": "Will Hooley (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Kapeli Pifeleti (Hooker)",
+                    "17": "Olive Kilifi (Prop)",
+                    "18": "Dino Waldren (Prop)",
+                    "19": "Cam Orr (Lock)",
+                    "20": "Riekert Hattingh (Flanker)",
+                    "21": "Nate Augspurger (Scrum-half)",
+                    "22": "Luke Carty (Fly-half)",
+                    "23": "Ryan Matyas (Back)"
+                }
+            }
+        },
         "England": {
             "Teams": [
                 "Bath",
@@ -213,82 +931,82 @@
                 }
             }
         },
-            "South Africa": {
-                "Teams": [
-                    "Stormers",
-                    "Bulls",
-                    "Sharks",
-                    "Lions",
-                    "Cheetahs"
-                ],
-                "Stadiums": [
-                    {"name": "FNB Stadium", "capacity": 94736, "city": "Johannesburg"},
-                    {"name": "Ellis Park Stadium", "capacity": 62000, "city": "Johannesburg"},
-                    {"name": "Cape Town Stadium", "capacity": 58000, "city": "Cape Town"},
-                    {"name": "Moses Mabhida Stadium", "capacity": 56000, "city": "Durban"},
-                    {"name": "Loftus Versfeld Stadium", "capacity": 51762, "city": "Pretoria"},
-                    {"name": "Kings Park Stadium", "capacity": 52000, "city": "Durban"},
-                    {"name": "Newlands Stadium", "capacity": 50000, "city": "Cape Town"},
-                    {"name": "Nelson Mandela Bay Stadium", "capacity": 46000, "city": "Port Elizabeth"},
-                    {"name": "Peter Mokaba Stadium", "capacity": 41500, "city": "Polokwane"},
-                    {"name": "Free State Stadium", "capacity": 40091, "city": "Bloemfontein"},
-                    {"name": "Mbombela Stadium", "capacity": 40000, "city": "Nelspruit"},
-                    {"name": "Royal Bafokeng Stadium", "capacity": 38000, "city": "Rustenburg"},
-                    {"name": "Athlone Stadium", "capacity": 34000, "city": "Cape Town"},
-                    {"name": "Harry Gwala Stadium", "capacity": 12500, "city": "Pietermaritzburg"}
-                ],
-                "Fixtures": [
-                    {"date": "2023-10-28", "opponent": "New Zealand", "venue": "Ellis Park", "result": "Win"},
-                    {"date": "2022-07-16", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"},
-                    {"date": "2021-11-20", "opponent": "England", "venue": "Twickenham", "result": "Win"},
-                    {"date": "2020-10-24", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
-                    {"date": "2019-11-02", "opponent": "England", "venue": "Yokohama", "result": "Win"}
-                ],
-                "Trophies": [
-                    {"name": "Rugby Championship", "year_won": [1998, 2004, 2009, 2019, 2023]},
-                    {"name": "World Cup", "year_won": [1995, 2007, 2019, 2023]},
-                    {"name": "British & Irish Lions Series", "year_won": [1962, 1968, 1974, 1980, 1997, 2009, 2021]}
-                ],
-                "FactBox": {
-                    "Facts": [
-                        "South Africa holds the record for the most Rugby World Cup wins (4) (1995, 2007, 2019, 2023).",
-                        "After Nelson Mandela wore a Springbok jersey in the 1995 World Cup final, it became a symbol of unity post-Apartheid.",
-                        "Siya Kolisi became the first black captain of South Africa in 2018 and led them to a historic 2019 World Cup victory.",
-                        "South Africa's Andries Bekker (2.08m / 6'10) is one of the tallest rugby players in history.",
-                        "Chester Williams, the only black player in the 1995 Springbok squad, became a symbol of change in South African rugby.",
-                        "South Africa is the only team to have beaten the All Blacks in a Rugby World Cup final (2023).",
-                        "The 1995 Rugby World Cup victory was turned into the Hollywood movie 'Invictus', starring Matt Damon and Morgan Freeman.",
-                        "South Africa is the only team to have won every Rugby World Cup final they've played in (1995, 2007, 2019, 2023)."   
-                    ]
-                }, 
-                "Players": {
-                    "Starting XV": {
-                        "1": "Steven Kitshoff (Prop)",
-                        "2": "Malcolm Marx (Hooker)",
-                        "3": "Frans Malherbe (Prop)",
-                        "4": "Eben Etzebeth (Lock)",
-                        "5": "Franco Mostert (Lock)",
-                        "6": "Siya Kolisi (Flanker)",
-                        "7": "Pieter-Steph du Toit (Flanker)",
-                        "8": "Jasper Wiese (Number 8)",
-                        "9": "Faf de Klerk (Scrum-half)",
-                        "10": "Handré Pollard (Fly-half)",
-                        "11": "Makazole Mapimpi (Wing)",
-                        "12": "Damian de Allende (Centre)",
-                        "13": "Jesse Kriel (Centre)",
-                        "14": "Cheslin Kolbe (Wing)",
-                        "15": "Willie le Roux (Fullback)"
-                    },
-                    "Substitutes": {
-                        "16": "Bongi Mbonambi (Hooker)",
-                        "17": "Ox Nche (Prop)",
-                        "18": "Trevor Nyakane (Prop)",
-                        "19": "Marvin Orie (Lock)",
-                        "20": "Kwagga Smith (Flanker)",
-                        "21": "Jaden Hendrikse (Scrum-half)",
-                        "22": "Manie Libbok (Fly-half)",
-                        "23": "Canan Moodie (Back)"
-                }
+        "South Africa": {
+            "Teams": [
+                "Stormers",
+                "Bulls",
+                "Sharks",
+                "Lions",
+                "Cheetahs"
+            ],
+            "Stadiums": [
+                {"name": "FNB Stadium", "capacity": 94736, "city": "Johannesburg"},
+                {"name": "Ellis Park Stadium", "capacity": 62000, "city": "Johannesburg"},
+                {"name": "Cape Town Stadium", "capacity": 58000, "city": "Cape Town"},
+                {"name": "Moses Mabhida Stadium", "capacity": 56000, "city": "Durban"},
+                {"name": "Loftus Versfeld Stadium", "capacity": 51762, "city": "Pretoria"},
+                {"name": "Kings Park Stadium", "capacity": 52000, "city": "Durban"},
+                {"name": "Newlands Stadium", "capacity": 50000, "city": "Cape Town"},
+                {"name": "Nelson Mandela Bay Stadium", "capacity": 46000, "city": "Port Elizabeth"},
+                {"name": "Peter Mokaba Stadium", "capacity": 41500, "city": "Polokwane"},
+                {"name": "Free State Stadium", "capacity": 40091, "city": "Bloemfontein"},
+                {"name": "Mbombela Stadium", "capacity": 40000, "city": "Nelspruit"},
+                {"name": "Royal Bafokeng Stadium", "capacity": 38000, "city": "Rustenburg"},
+                {"name": "Athlone Stadium", "capacity": 34000, "city": "Cape Town"},
+                {"name": "Harry Gwala Stadium", "capacity": 12500, "city": "Pietermaritzburg"}
+            ],
+            "Fixtures": [
+                {"date": "2023-10-28", "opponent": "New Zealand", "venue": "Ellis Park", "result": "Win"},
+                {"date": "2022-07-16", "opponent": "Australia", "venue": "Suncorp Stadium", "result": "Loss"},
+                {"date": "2021-11-20", "opponent": "England", "venue": "Twickenham", "result": "Win"},
+                {"date": "2020-10-24", "opponent": "France", "venue": "Stade de France", "result": "Loss"},
+                {"date": "2019-11-02", "opponent": "England", "venue": "Yokohama", "result": "Win"}
+            ],
+            "Trophies": [
+                {"name": "Rugby Championship", "year_won": [1998, 2004, 2009, 2019, 2023]},
+                {"name": "World Cup", "year_won": [1995, 2007, 2019, 2023]},
+                {"name": "British & Irish Lions Series", "year_won": [1962, 1968, 1974, 1980, 1997, 2009, 2021]}
+            ],
+            "FactBox": {
+                "Facts": [
+                    "South Africa holds the record for the most Rugby World Cup wins (4) (1995, 2007, 2019, 2023).",
+                    "After Nelson Mandela wore a Springbok jersey in the 1995 World Cup final, it became a symbol of unity post-Apartheid.",
+                    "Siya Kolisi became the first black captain of South Africa in 2018 and led them to a historic 2019 World Cup victory.",
+                    "South Africa's Andries Bekker (2.08m / 6'10) is one of the tallest rugby players in history.",
+                    "Chester Williams, the only black player in the 1995 Springbok squad, became a symbol of change in South African rugby.",
+                    "South Africa is the only team to have beaten the All Blacks in a Rugby World Cup final (2023).",
+                    "The 1995 Rugby World Cup victory was turned into the Hollywood movie 'Invictus', starring Matt Damon and Morgan Freeman.",
+                    "South Africa is the only team to have won every Rugby World Cup final they've played in (1995, 2007, 2019, 2023)."   
+                ]
+            }, 
+            "Players": {
+                "Starting XV": {
+                    "1": "Steven Kitshoff (Prop)",
+                    "2": "Malcolm Marx (Hooker)",
+                    "3": "Frans Malherbe (Prop)",
+                    "4": "Eben Etzebeth (Lock)",
+                    "5": "Franco Mostert (Lock)",
+                    "6": "Siya Kolisi (Flanker)",
+                    "7": "Pieter-Steph du Toit (Flanker)",
+                    "8": "Jasper Wiese (Number 8)",
+                    "9": "Faf de Klerk (Scrum-half)",
+                    "10": "Handré Pollard (Fly-half)",
+                    "11": "Makazole Mapimpi (Wing)",
+                    "12": "Damian de Allende (Centre)",
+                    "13": "Jesse Kriel (Centre)",
+                    "14": "Cheslin Kolbe (Wing)",
+                    "15": "Willie le Roux (Fullback)"
+                },
+                "Substitutes": {
+                    "16": "Bongi Mbonambi (Hooker)",
+                    "17": "Ox Nche (Prop)",
+                    "18": "Trevor Nyakane (Prop)",
+                    "19": "Marvin Orie (Lock)",
+                    "20": "Kwagga Smith (Flanker)",
+                    "21": "Jaden Hendrikse (Scrum-half)",
+                    "22": "Manie Libbok (Fly-half)",
+                    "23": "Canan Moodie (Back)"
+            }
             }
         }
     }
