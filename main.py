@@ -547,6 +547,8 @@ class SCOWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
+#########
+
 class WALWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -881,6 +883,7 @@ class NZLWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
+#########
 
 class FRAWindow(QMainWindow):
     def __init__(self):
@@ -1129,6 +1132,8 @@ class ITAWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
+#########
+
 class FIJWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -1209,6 +1214,8 @@ class FIJWindow(QMainWindow):
         msg.setIcon(QMessageBox.NoIcon)  # No default icon
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
+
+#########
 
 class JAPWindow(QMainWindow):
     def __init__(self):
@@ -1291,6 +1298,8 @@ class JAPWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
+#######
+
 class GEOWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -1372,6 +1381,7 @@ class GEOWindow(QMainWindow):
         msg.setStandardButtons(QMessageBox.Close)  # Add close button
         msg.exec_()
 
+#########
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
