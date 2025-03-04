@@ -1,7 +1,7 @@
 import sys, time
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, \
-    QLabel, QTextBrowser, QComboBox, QListWidget, QProgressBar, QMessageBox, QDialogButtonBox
+    QLabel, QTextBrowser, QComboBox, QListWidget, QProgressBar, QMessageBox, QDialogButtonBox, QLineEdit
 from PyQt5 import uic
 from datetime import datetime
 import json
@@ -30,39 +30,6 @@ class My_UI(QMainWindow):
 
         # Load JSON Data
         self.data = load_json()  
-
-           # Ensure correct widget references
-        self.textFactContent = self.findChild(QTextBrowser, "textBrowserFACTBOX")
-        self.pushButtonFactRefresh = self.findChild(QPushButton, "pushButtonREFRESHFACT")
-
-        # Connect Refresh Button
-        self.pushButtonFactRefresh.clicked.connect(self.refresh_fact_box)
-
-        # Show a random fact at startup
-        self.show_random_fact()
-
-    def show_random_fact(self):
-        """Displays a random fact from any country at startup or on refresh."""
-        all_facts = []
-
-        # Ensure "Countries" exists in JSON
-        if "Countries" in self.data:
-            for country, details in self.data["Countries"].items():
-                if "FactBox" in details and "Facts" in details["FactBox"]:
-                    all_facts.extend(details["FactBox"]["Facts"])
-
-
-        # Select and display a random fact
-        if all_facts:
-            random_fact = random.choice(all_facts)
-            self.textFactContent.setText(random_fact)
-        else:
-            self.textFactContent.setText("No facts available.")
-
-    def refresh_fact_box(self):
-        """Refreshes the fact box when the refresh button is clicked."""
-        self.show_random_fact()
-
 
         self.pushButtonAUS = self.findChild(QtWidgets.QPushButton, "pushButtonAUS")
         self.pushButtonAUS2 = self.findChild(QtWidgets.QPushButton, "pushButtonAUS2")
@@ -108,9 +75,26 @@ class My_UI(QMainWindow):
         self.pushButtonENG2.clicked.connect(self.open_england_window)
         self.pushButtonSCO2.clicked.connect(self.open_scotland_window)
         self.pushButtonIRE2.clicked.connect(self.open_ireland_window)
+
         
-        
-        
+
+        # Ensure Fact Box Works on Startup
+        self.textFactContent = self.findChild(QTextBrowser, "textBrowserFACTBOX")
+        self.pushButtonFactRefresh = self.findChild(QPushButton, "pushButtonREFRESHFACT")
+
+        if self.pushButtonFactRefresh:
+            self.pushButtonFactRefresh.clicked.connect(self.refresh_fact_box)
+
+        # Show a random fact immediately on startup
+        self.show_random_fact()
+
+                        # Initialize Search Bar Widgets
+        self.lineEditSearch = self.findChild(QLineEdit, "lineEditSearch")
+        self.listWidgetSearchResults = self.findChild(QListWidget, "listWidgetSearchResults")
+
+        # Connect Search Bar to Search Function
+        if self.lineEditSearch:
+            self.lineEditSearch.textChanged.connect(self.update_search_results)
 
     def open_australia_window(self):
         self.australia_window = AUSWindow()
@@ -172,7 +156,134 @@ class My_UI(QMainWindow):
         self.wales_window = IREWindow()
         self.wales_window.show()
 
-###########  
+    def refresh_fact_box(self):
+        self.show_random_fact()
+
+            # Show a random fact at startup
+        self.show_random_fact()
+
+
+###########
+
+
+    def show_random_fact(self):
+        """Displays a random fact from any country at startup or on refresh."""
+        all_facts = []
+
+        # Ensure "Countries" exists in JSON
+        if "Countries" in self.data:
+            for country, details in self.data["Countries"].items():
+                if "FactBox" in details and "Facts" in details["FactBox"]:
+                    all_facts.extend(details["FactBox"]["Facts"])
+
+
+        # Select and display a random fact
+        if all_facts:
+            random_fact = random.choice(all_facts)
+            self.textFactContent.setText(random_fact)
+        else:
+            self.textFactContent.setText("No facts available.")
+
+##################
+
+    def update_search_results(self):
+        """Filters JSON data based on hierarchical input: Country → Category → Entry"""
+        search_text = self.lineEditSearch.text().strip().lower()
+        self.listWidgetSearchResults.clear()
+
+        if not search_text:
+            return  # If search is empty, clear the results
+
+        results = []
+        search_terms = search_text.split()  # Split user input into words
+        search_length = len(search_terms)
+
+        for country, details in self.data["Countries"].items():
+            country_name = country.lower()
+
+            # 1️⃣ If user only types the country name, show structured data for that country
+            if search_length == 1 and search_terms[0] == country_name:
+                results.append(f"🌍 Country: {country}")
+                if "Teams" in details:
+                    results.append(f"🏉 Teams: {', '.join(details['Teams'])}")
+                if "Stadiums" in details:
+                    results.append("🏟️ Stadiums:")
+                    results.extend([f"  - {stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in details["Stadiums"]])
+                if "Fixtures" in details:
+                    results.append("📅 Fixtures:")
+                    results.extend([f"  - {fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in details["Fixtures"]])
+                if "Trophies" in details:
+                    results.append("🏆 Trophies:")
+                    results.extend([f"  - {trophy['name']} (Won in: {', '.join(map(str, trophy['year_won']))})" for trophy in details["Trophies"]])
+                if "Players" in details:
+                    results.append("👕 Players:")
+                    results.extend([f"  - {pos}. {name}" for pos, name in details["Players"]["Starting XV"].items()])
+                    results.append("🔄 Substitutes:")
+                    results.extend([f"  - {pos}. {name}" for pos, name in details["Players"]["Substitutes"].items()])
+
+            # 2️⃣ If user types 'Country + Category' (e.g., "England Stadiums")
+            elif search_length == 2 and search_terms[0] == country_name:
+                category = search_terms[1]
+                if category in details:
+                    results.append(f"📂 {category.capitalize()} under {country}:")
+                    if isinstance(details[category], list):
+                        results.extend([f"✅ {item}" for item in details[category]])
+                    elif isinstance(details[category], dict):
+                        results.extend([f"✅ {key}: {value}" for key, value in details[category].items()])
+                elif category == "stadiums" and "Stadiums" in details:
+                    results.append(f"🏟️ Stadiums in {country}:")
+                    results.extend([f"  - {stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in details["Stadiums"]])
+
+            # 3️⃣ If user types 'Country + Category + Specific Entry' (e.g., "England Stadium Twickenham")
+            elif search_length >= 3 and search_terms[0] == country_name:
+                category = search_terms[1]
+                entry = " ".join(search_terms[2:])
+                if category in details:
+                    if isinstance(details[category], list):
+                        filtered_items = [item for item in details[category] if entry in item.lower()]
+                        if filtered_items:
+                            results.extend([f"✅ {item}" for item in filtered_items])
+                    elif isinstance(details[category], dict):
+                        filtered_items = {k: v for k, v in details[category].items() if entry in k.lower() or entry in str(v).lower()}
+                        if filtered_items:
+                            results.extend([f"✅ {key}: {value}" for key, value in filtered_items.items()])
+                elif category == "stadiums" and "Stadiums" in details:
+                    filtered_stadiums = [s for s in details["Stadiums"] if entry in s["name"].lower()]
+                    if filtered_stadiums:
+                        results.append(f"🏟️ Matching Stadiums in {country}:")
+                        results.extend([f"  - {s['name']} ({s['city']}) - Capacity: {s['capacity']}" for s in filtered_stadiums])
+
+        # 4️⃣ If searching for a general category (e.g., "stadiums"), return all matching entries
+        if search_length == 1 and search_terms[0] in ["stadium", "stadiums"]:
+            for country, details in self.data["Countries"].items():
+                if "Stadiums" in details:
+                    results.extend([f"🏟️ {stadium['name']} ({country})" for stadium in details["Stadiums"]])
+
+        # 5️⃣ If searching for a specific player or team, return direct matches
+        for country, details in self.data["Countries"].items():
+            if "Teams" in details:
+                for team in details["Teams"]:
+                    if search_text in team.lower():
+                        results.append(f"🏉 Team: {team} ({country})")
+            if "Players" in details:
+                for pos, player in details["Players"]["Starting XV"].items():
+                    if search_text in player.lower():
+                        results.append(f"👕 Player: {player} ({country})")
+                for pos, player in details["Players"]["Substitutes"].items():
+                    if search_text in player.lower():
+                        results.append(f"👕 Player: {player} ({country})")
+
+        # Update the ListWidget with results
+        if results:
+            self.listWidgetSearchResults.addItems(results)
+        else:
+            self.listWidgetSearchResults.addItem("No results found.")
+
+
+##################
+
+#################
+
 
 class AUSWindow(QMainWindow):
     def __init__(self):
