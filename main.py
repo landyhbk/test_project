@@ -76,7 +76,9 @@ class My_UI(QMainWindow):
         self.pushButtonSCO2.clicked.connect(self.open_scotland_window)
         self.pushButtonIRE2.clicked.connect(self.open_ireland_window)
 
-        
+        self.listWidgetSearchResults.itemClicked.connect(self.handle_search_selection)
+
+        self.last_selected_country = None
 
         # Ensure Fact Box Works on Startup
         self.textFactContent = self.findChild(QTextBrowser, "textBrowserFACTBOX")
@@ -167,17 +169,13 @@ class My_UI(QMainWindow):
 
 
     def show_random_fact(self):
-        """Displays a random fact from any country at startup or on refresh."""
         all_facts = []
 
-        # Ensure "Countries" exists in JSON
         if "Countries" in self.data:
             for country, details in self.data["Countries"].items():
                 if "FactBox" in details and "Facts" in details["FactBox"]:
                     all_facts.extend(details["FactBox"]["Facts"])
 
-
-        # Select and display a random fact
         if all_facts:
             random_fact = random.choice(all_facts)
             self.textFactContent.setText(random_fact)
@@ -185,86 +183,44 @@ class My_UI(QMainWindow):
             self.textFactContent.setText("No facts available.")
 
 ##################
-
     def update_search_results(self):
-        """Filters JSON data based on hierarchical input: Country → Category → Entry"""
         search_text = self.lineEditSearch.text().strip().lower()
         self.listWidgetSearchResults.clear()
 
         if not search_text:
-            return  # If search is empty, clear the results
+            return 
 
         results = []
-        search_terms = search_text.split()  # Split user input into words
+        search_terms = search_text.split()  
         search_length = len(search_terms)
 
         for country, details in self.data["Countries"].items():
             country_name = country.lower()
 
-            # 1️⃣ If user only types the country name, show structured data for that country
             if search_length == 1 and search_terms[0] == country_name:
                 results.append(f"🌍 Country: {country}")
                 if "Teams" in details:
-                    results.append(f"🏉 Teams: {', '.join(details['Teams'])}")
+                    results.append(f"🏉 Teams (Click to View)")
                 if "Stadiums" in details:
-                    results.append("🏟️ Stadiums:")
-                    results.extend([f"  - {stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in details["Stadiums"]])
-                if "Fixtures" in details:
-                    results.append("📅 Fixtures:")
-                    results.extend([f"  - {fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in details["Fixtures"]])
-                if "Trophies" in details:
-                    results.append("🏆 Trophies:")
-                    results.extend([f"  - {trophy['name']} (Won in: {', '.join(map(str, trophy['year_won']))})" for trophy in details["Trophies"]])
+                    results.append("🏟️ Stadiums (Click to View)")
                 if "Players" in details:
-                    results.append("👕 Players:")
-                    results.extend([f"  - {pos}. {name}" for pos, name in details["Players"]["Starting XV"].items()])
-                    results.append("🔄 Substitutes:")
-                    results.extend([f"  - {pos}. {name}" for pos, name in details["Players"]["Substitutes"].items()])
+                    results.append("👕 Players (Click to View)")
+                if "Trophies" in details:
+                    results.append("🏆 Trophies (Click to View)")
+                if "Fixtures" in details:
+                    results.append("📅 Fixtures & Results (Click to View)")
 
-            # 2️⃣ If user types 'Country + Category' (e.g., "England Stadiums")
-            elif search_length == 2 and search_terms[0] == country_name:
-                category = search_terms[1]
-                if category in details:
-                    results.append(f"📂 {category.capitalize()} under {country}:")
-                    if isinstance(details[category], list):
-                        results.extend([f"✅ {item}" for item in details[category]])
-                    elif isinstance(details[category], dict):
-                        results.extend([f"✅ {key}: {value}" for key, value in details[category].items()])
-                elif category == "stadiums" and "Stadiums" in details:
-                    results.append(f"🏟️ Stadiums in {country}:")
-                    results.extend([f"  - {stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in details["Stadiums"]])
-
-            # 3️⃣ If user types 'Country + Category + Specific Entry' (e.g., "England Stadium Twickenham")
-            elif search_length >= 3 and search_terms[0] == country_name:
-                category = search_terms[1]
-                entry = " ".join(search_terms[2:])
-                if category in details:
-                    if isinstance(details[category], list):
-                        filtered_items = [item for item in details[category] if entry in item.lower()]
-                        if filtered_items:
-                            results.extend([f"✅ {item}" for item in filtered_items])
-                    elif isinstance(details[category], dict):
-                        filtered_items = {k: v for k, v in details[category].items() if entry in k.lower() or entry in str(v).lower()}
-                        if filtered_items:
-                            results.extend([f"✅ {key}: {value}" for key, value in filtered_items.items()])
-                elif category == "stadiums" and "Stadiums" in details:
-                    filtered_stadiums = [s for s in details["Stadiums"] if entry in s["name"].lower()]
-                    if filtered_stadiums:
-                        results.append(f"🏟️ Matching Stadiums in {country}:")
-                        results.extend([f"  - {s['name']} ({s['city']}) - Capacity: {s['capacity']}" for s in filtered_stadiums])
-
-        # 4️⃣ If searching for a general category (e.g., "stadiums"), return all matching entries
-        if search_length == 1 and search_terms[0] in ["stadium", "stadiums"]:
-            for country, details in self.data["Countries"].items():
-                if "Stadiums" in details:
-                    results.extend([f"🏟️ {stadium['name']} ({country})" for stadium in details["Stadiums"]])
-
-        # 5️⃣ If searching for a specific player or team, return direct matches
         for country, details in self.data["Countries"].items():
+            if "Stadiums" in details:
+                for stadium in details["Stadiums"]:
+                    if search_text in stadium["name"].lower():
+                        results.append(f"🏟️ {stadium['name']} ({country}) - Capacity: {stadium['capacity']}")
+
             if "Teams" in details:
                 for team in details["Teams"]:
                     if search_text in team.lower():
                         results.append(f"🏉 Team: {team} ({country})")
+
             if "Players" in details:
                 for pos, player in details["Players"]["Starting XV"].items():
                     if search_text in player.lower():
@@ -273,14 +229,141 @@ class My_UI(QMainWindow):
                     if search_text in player.lower():
                         results.append(f"👕 Player: {player} ({country})")
 
-        # Update the ListWidget with results
+            if "Fixtures" in details:
+                if "fixture" in search_text or any(char.isdigit() for char in search_text):  
+                    for fixture in details["Fixtures"]:
+                        fixture_text = f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}"
+                        if search_text in fixture_text.lower():
+                            results.append(f"📅 Fixture: {fixture_text} ({country})")
+
+            if "Trophies" in details:
+                for trophy in details["Trophies"]:
+                    if search_text in trophy["name"].lower():
+                        results.append(f"🏆 Trophy: {trophy['name']} ({country}) - Won in: {', '.join(map(str, trophy['year_won']))}")
+
+
         if results:
             self.listWidgetSearchResults.addItems(results)
         else:
             self.listWidgetSearchResults.addItem("No results found.")
 
+###########
+    def show_stadiums(self, country):
+        if not country:
+            QMessageBox.warning(self, "Error", "No country selected.")
+            return
+
+        stadiums = self.data["Countries"][country]["Stadiums"]
+        stadium_info = "\n\n".join(
+            [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle(f"🏟️ Stadiums in {country}")
+        msg.setText(stadium_info)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+    def show_teams(self, country):
+        if not country:
+            QMessageBox.warning(self, "Error", "No country selected.")
+            return
+
+        teams = self.data["Countries"][country]["Teams"]
+        team_info = "\n\n".join(teams)
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle(f"🏉 Teams in {country}")
+        msg.setText(team_info)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+    def show_players(self, country):
+        if not country:
+            QMessageBox.warning(self, "Error", "No country selected.")
+            return
+
+        players = self.data["Countries"][country]["Players"]
+        starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
+        substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
+        player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle(f"👕 Players in {country}")
+        msg.setText(player_info)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+    def show_trophies(self, country):
+        if not country:
+            QMessageBox.warning(self, "Error", "No country selected.")
+            return
+
+        trophies = self.data["Countries"][country]["Trophies"]
+        trophy_info = "\n\n".join(
+            [f"{trophy['name']} (Won in: {', '.join(map(str, trophy['year_won']))})" for trophy in trophies]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle(f"🏆 Trophies in {country}")
+        msg.setText(trophy_info)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+    def show_fixtures(self, country):
+        if not country:
+            QMessageBox.warning(self, "Error", "No country selected.")
+            return
+
+        fixtures = self.data["Countries"][country]["Fixtures"]
+        fixture_info = "\n\n".join(
+            [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
+        )
+
+        msg = QMessageBox(self)
+        msg.setWindowTitle(f"📅 Fixtures in {country}")
+        msg.setText(fixture_info)
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Close)
+        msg.exec_()
+
+
+
+
 
 ##################
+
+
+    def handle_search_selection(self, item):
+        result_text = item.text()
+
+        for country in self.data["Countries"]:
+            if country in result_text:
+                self.last_selected_country = country
+                return
+
+        if self.last_selected_country:
+            if "🏟️ Stadiums" in result_text:  
+                self.show_stadiums(self.last_selected_country)
+            elif "🏉 Teams" in result_text:  
+                self.show_teams(self.last_selected_country)
+            elif "👕 Players" in result_text:  
+                self.show_players(self.last_selected_country)
+            elif "🏆 Trophies" in result_text:  
+                self.show_trophies(self.last_selected_country)
+            elif "📅 Fixtures" in result_text:  
+                self.show_fixtures(self.last_selected_country)
+        else:
+            QMessageBox.warning(self, "Error", "No country selected. Please search for and click a country first.")
+
+
+
+
+
 
 #################
 
@@ -844,7 +927,7 @@ class SAWindow(QMainWindow):
         self.pushButtonSAPLAYERS.clicked.connect(self.show_players)
 
     def show_teams(self):
-        teams = self.data["Countries"]["South Africa"]["Teams"]
+        teams = self.data["Countries"]["South_Africa"]["Teams"]
         team_info = "\n\n".join(teams)
 
         msg = QMessageBox(self)
@@ -856,7 +939,7 @@ class SAWindow(QMainWindow):
 
 
     def show_stadiums(self):
-        stadiums = self.data["Countries"]["South Africa"]["Stadiums"]
+        stadiums = self.data["Countries"]["South_Africa"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
@@ -870,7 +953,7 @@ class SAWindow(QMainWindow):
 
 
     def show_fixtures(self):
-        fixtures = self.data["Countries"]["South Africa"]["Fixtures"]
+        fixtures = self.data["Countries"]["South_Africa"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
@@ -884,7 +967,7 @@ class SAWindow(QMainWindow):
 
 
     def show_trophies(self):
-        trophies = self.data["Countries"]["South Africa"]["Trophies"]
+        trophies = self.data["Countries"]["South_Africa"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
@@ -898,7 +981,7 @@ class SAWindow(QMainWindow):
 
 
     def show_players(self):
-        players = self.data["Countries"]["South Africa"]["Players"]
+        players = self.data["Countries"]["South_Africa"]["Players"]
         starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
         substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
         player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
