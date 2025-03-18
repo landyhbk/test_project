@@ -197,7 +197,7 @@ class My_UI(QMainWindow):
         for country, details in self.data["Countries"].items():
             country_name = country.lower()
 
-            if search_length == 1 and search_terms[0] == country_name:
+            if search_text == country_name:
                 results.append(f"🌍 Country: {country}")
                 if "Teams" in details:
                     results.append(f"🏉 Teams (Click to View)")
@@ -927,7 +927,7 @@ class SAWindow(QMainWindow):
         self.pushButtonSAPLAYERS.clicked.connect(self.show_players)
 
     def show_teams(self):
-        teams = self.data["Countries"]["South_Africa"]["Teams"]
+        teams = self.data["Countries"]["South Africa"]["Teams"]
         team_info = "\n\n".join(teams)
 
         msg = QMessageBox(self)
@@ -939,7 +939,7 @@ class SAWindow(QMainWindow):
 
 
     def show_stadiums(self):
-        stadiums = self.data["Countries"]["South_Africa"]["Stadiums"]
+        stadiums = self.data["Countries"]["South Africa"]["Stadiums"]
         stadium_info = "\n\n".join(
             [f"{stadium['name']} ({stadium['city']}) - Capacity: {stadium['capacity']}" for stadium in stadiums]
         )
@@ -953,7 +953,7 @@ class SAWindow(QMainWindow):
 
 
     def show_fixtures(self):
-        fixtures = self.data["Countries"]["South_Africa"]["Fixtures"]
+        fixtures = self.data["Countries"]["South Africa"]["Fixtures"]
         fixture_info = "\n\n".join(
             [f"{fixture['date']} vs {fixture['opponent']} at {fixture['venue']} - Result: {fixture['result']}" for fixture in fixtures]
         )
@@ -967,7 +967,7 @@ class SAWindow(QMainWindow):
 
 
     def show_trophies(self):
-        trophies = self.data["Countries"]["South_Africa"]["Trophies"]
+        trophies = self.data["Countries"]["South Africa"]["Trophies"]
         trophy_info = "\n\n".join(
             [f"{trophy['name']} - Won in: {', '.join(map(str, trophy['year_won']))}" for trophy in trophies]
         )
@@ -981,7 +981,7 @@ class SAWindow(QMainWindow):
 
 
     def show_players(self):
-        players = self.data["Countries"]["South_Africa"]["Players"]
+        players = self.data["Countries"]["South Africa"]["Players"]
         starting_players = "\n".join([f"{pos}. {name}" for pos, name in players["Starting XV"].items()])
         substitutes = "\n".join([f"{pos}. {name}" for pos, name in players["Substitutes"].items()])
         player_info = f"**Starting XV**:\n{starting_players}\n\n**Substitutes**:\n{substitutes}"
