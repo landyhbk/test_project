@@ -28,8 +28,8 @@
                 {"date": "2020-11-14", "opponent": "New Zealand", "venue": "Bankwest Stadium", "result": "Win"}
             ],
             "Trophies": [
-                {"name": "Rugby Championship", "year_won": []},
-                {"name": "South American Rugby Championship", "year_won": [1951, 1958, 1961, 1964, 1967, 1969, 1971, 1973, 1975, 1977, 1979, 1981, 1983, 1985, 1987, 1989, 1991, 1993, 1995, 1997, 1998, 2000, 2001, 2002, 2003]}
+                {"name": "Rugby Championship", "year_won": ["Never"]},
+                {"name": "South American Rugby Championship", "year_won": [1989, 1991, 1993, 1995, 1997, 1998, 2000, 2001, 2002, 2003]}
             ],
             "FactBox": {
                 "Facts": [
@@ -386,7 +386,7 @@
                 {"date": "2020-11-14", "opponent": "Italy", "venue": "Stade de France", "result": "Win"}
             ],
             "Trophies": [
-                {"name": "Six Nations Championship", "year_won": [1954, 1955, 1959, 1961, 1962, 1967, 1970, 1973, 1977, 1981, 1983, 1986, 1987, 1989, 1993, 1997, 1998, 2002, 2004, 2006, 2007, 2010, 2022]},
+                {"name": "Six Nations Championship", "year_won": [1989, 1993, 1997, 1998, 2002, 2004, 2006, 2007, 2010, 2022]},
                 {"name": "Grand Slam", "year_won": [1968, 1977, 1981, 1987, 1997, 1998, 2002, 2004, 2010, 2022]},
                 {"name": "Rugby World Cup Finalists", "year_won": [1987, 1999, 2011]}
             ],
