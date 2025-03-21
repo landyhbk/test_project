@@ -11,7 +11,7 @@ import random
 
 TIME_LIMIT = 100
 
-def load_json(file_path="testjson.json"):
+def load_json(file_path="rugbyjson.json"):
     try:
         with open(file_path, "r") as file:
             return json.load(file)
