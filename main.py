@@ -52,6 +52,7 @@ class My_UI(QMainWindow):
         self.pushButtonENG2 = self.findChild(QtWidgets.QPushButton, "pushButtonENG2")
         self.pushButtonSCO2 = self.findChild(QtWidgets.QPushButton, "pushButtonSCO2")
         self.pushButtonIRE2 = self.findChild(QtWidgets.QPushButton, "pushButtonIRE2")
+        self.pushButtonRugbyRules = self.findChild(QtWidgets.QPushButton, "pushButtonRugbyRules")
         
 
         self.pushButtonAUS.clicked.connect(self.open_australia_window)
@@ -75,6 +76,7 @@ class My_UI(QMainWindow):
         self.pushButtonENG2.clicked.connect(self.open_england_window)
         self.pushButtonSCO2.clicked.connect(self.open_scotland_window)
         self.pushButtonIRE2.clicked.connect(self.open_ireland_window)
+        self.pushButtonRugbyRules.clicked.connect(self.open_rugbyrules_window)
 
         self.listWidgetSearchResults.itemClicked.connect(self.handle_search_selection)
 
@@ -163,6 +165,10 @@ class My_UI(QMainWindow):
 
             # Show a random fact at startup
         self.show_random_fact()
+    
+    def open_rugbyrules_window(self):
+        self.rugbyrules_window = RRWindow()
+        self.rugbyrules_window.show()
 
 
 ###########
@@ -366,7 +372,13 @@ class My_UI(QMainWindow):
 
 
 #################
+class RRWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("rugbyruleswindow.ui", self)
+        self.show()
 
+    
 
 class AUSWindow(QMainWindow):
     def __init__(self):

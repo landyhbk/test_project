@@ -669,6 +669,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonRugbyRules">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>10</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rugby Rules</string>
+    </property>
+   </widget>
    <zorder>listWidgetSearchResults</zorder>
    <zorder>label</zorder>
    <zorder>lineEditSearch</zorder>
@@ -699,6 +712,7 @@
    <zorder>pushButtonAUS2</zorder>
    <zorder>pushButtonFIJ2</zorder>
    <zorder>pushButtonITA2</zorder>
+   <zorder>pushButtonRugbyRules</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
