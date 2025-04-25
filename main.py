@@ -188,7 +188,11 @@ class My_UI(QMainWindow):
         else:
             self.textFactContent.setText("No facts available.")
 
+
 ##################
+
+
+
     def update_search_results(self):
         search_text = self.lineEditSearch.text().strip().lower()
         self.listWidgetSearchResults.clear()
